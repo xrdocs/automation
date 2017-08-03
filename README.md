@@ -1,2 +1,1 @@
-# automation
-Blog posts, Tutorials and Techdocs on Network Automation capabilties in the SP domain associated with IOS-XR.
+Base-Template Repository for xrdocs sub-websites
