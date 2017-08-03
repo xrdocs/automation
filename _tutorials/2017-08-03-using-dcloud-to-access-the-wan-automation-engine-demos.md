@@ -12,7 +12,7 @@ tags:
 ---
 {% include toc %}
 
-# Overview
+## Overview
 
 The WAN Automation Engine (WAE) is a software platform that provides multivendor and multilayer visibility and analysis for service provider and large enterprise networks. It plays a critical role in answering key questions of network resource availability by simulating an abstracted model of the network, and when appropriate can automate and simplify Traffic Engineering mechanisms such as RSVP-TE and Segment Routing.
 
@@ -23,7 +23,7 @@ This tutorial will show you how to launch a WAE demo on dCloud.
 **Note:** There are several WAE demos on dCloud, the tutorial will tell you which demo to launch and what plan file to use.
 {: .notice--info}
 
-# Prerequisites
+## Prerequisites
 
 1. Make sure you have an account on cisco.com. 
 2. Using your cisco.com account try logging in to [dcloud.cisco.com](https://dcloud.cisco.com/).
@@ -31,7 +31,7 @@ This tutorial will show you how to launch a WAE demo on dCloud.
 ![dCloud Login](https://xrdocs.github.io/xrdocs-images/assets/tutorial-images/waeDcloud-login.png)
 {: .align-center}
 
-# Switch to the Appropriate Datacenter
+## Switch to the Appropriate Datacenter
 
 1. Select your user profile icon in the top right of the page.
 2. Change the datacenter option to the datacenter outlined in the tutorial.
@@ -39,7 +39,7 @@ This tutorial will show you how to launch a WAE demo on dCloud.
 ![dCloud Datacenter](https://xrdocs.github.io/xrdocs-images/assets/tutorial-images/waeDcloud-dc.png)
 {: .align-center}
 
-# Search for the Specified WAE Demo
+## Search for the Specified WAE Demo
 
 1. Select the *Catalog* tab on the top
 2. Search for the demo outlined in the tutorial.
@@ -47,14 +47,14 @@ This tutorial will show you how to launch a WAE demo on dCloud.
 ![dCloud Search](https://xrdocs.github.io/xrdocs-images/assets/tutorial-images/waeDcloud-search.png)
 {: .align-center}
 
-# Schedule and Launch the WAE Demo
+## Schedule and Launch the WAE Demo
 
 1. Follow the steps to schedule and start the WAE demo.
 
 **Note:** It may take up to 20 minutes after the scheduled start time before the demo is ready to use.
 {: .notice--info}
 
-# Access the WAE Demo
+## Access the WAE Demo
 
 1. Select the *My Dashboard* tab on the top.
 2. Select My Sessions, then select View for the demo.
@@ -74,7 +74,7 @@ There are two methods to access the demos.
 ![dCloud Anyconnect](https://xrdocs.github.io/xrdocs-images/assets/tutorial-images/waeDcloud-ac.png)
 {: .align-center}
 
-# Launch WAE Design and Open a Network Model
+## Launch WAE Design and Open a Network Model
 
 1. On the workstation desktop, open the WAE Design application.
 2. Select *File* -> *Open*
