@@ -324,6 +324,7 @@ prose:
     - .gitmodules
     - _data
     - _config.travis.yml
+    - /_techdocs
   metadata:
     _blogs:
       - name: "title"
