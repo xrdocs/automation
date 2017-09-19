@@ -320,6 +320,9 @@ prose:
     - feed.xml
     - README.md
     - _config.pdf.yml
+    - .travis.yml
+    - .gitmodules
+    - _data
   metadata:
     _blogs:
       - name: "title"
