@@ -112,3 +112,4 @@ When running a simulation, it's important to understand what *simulation mode* y
 # Conclusion
 This tutorial covered the basics of the WAE Design user interface. Please check out our other tutorials to explore additional features and capabilities of WAE.
 
+[WAE Design Quick Start Guide](https://developer.cisco.com/docs/wan-automation-engine/#!wae-design-quick-start-guide/getting-acquainted-with-wae-design). 
