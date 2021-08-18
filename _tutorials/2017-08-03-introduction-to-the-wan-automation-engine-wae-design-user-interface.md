@@ -1,6 +1,6 @@
 ---
 published: true
-date: '2017-08-03 14:53 -0700'
+date: '2021-08-18 21:45 +0800'
 title: Introduction to the WAN Automation Engine (WAE) Design User Interface
 tags:
   - cisco
@@ -113,3 +113,5 @@ When running a simulation, it's important to understand what *simulation mode* y
 This tutorial covered the basics of the WAE Design user interface. Please check out our other tutorials to explore additional features and capabilities of WAE.
 
 [WAE Design Quick Start Guide](https://developer.cisco.com/docs/wan-automation-engine/#!wae-design-quick-start-guide/getting-acquainted-with-wae-design). 
+
+
