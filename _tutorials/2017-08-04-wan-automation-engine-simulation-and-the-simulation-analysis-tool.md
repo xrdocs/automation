@@ -1,6 +1,6 @@
 ---
 published: true
-date: '2017-08-04 16:00 -0700'
+date: '2021-08-18 22:30 +0800'
 title: WAN Automation Engine Simulation and the Simulation Analysis Tool
 author: Josh Peters
 tags:
@@ -113,12 +113,10 @@ When the Simulation Analysis tool completes, you will now be able to see the Wor
 
 # Conclusion
 
-Using the WAE Design application, you can simulate a variety of "what if" scenarios. Some examples include simulating changes in topology, traffic or configured properties such as metrics. Simulation is a fundamental aspect of WAE and the capabilities of the WAE Design application are also available via API, future releases will use the API for automated workflows. Additional simulation and analysis tools are also available via WAE function packs. 
+Using the WAE Design application, you can simulate a variety of "what if" scenarios. Some examples include simulating changes in topology, traffic or configured properties such as metrics. Simulation is a fundamental aspect of WAE and the capabilities of the WAE Design application are also available via API, future releases will use the API for automated workflows. Additional simulation and analysis tools are also available via WAE function packs.
 
+Please check out our other tutorials to explore additional features and capabilities of WAE.
 
-
-
-
-
+[WAE Design Quick Start Guide](https://developer.cisco.com/docs/wan-automation-engine/#!wae-design-quick-start-guide/getting-acquainted-with-wae-design).
 
 
