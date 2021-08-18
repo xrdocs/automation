@@ -1,6 +1,6 @@
 ---
 published: true
-date: '2017-08-23 12:29 -0700'
+date: '2021-08-18 22:30 +0800'
 title: Multilayer Planning with the WAN Automation Engine
 author: Josh Peters
 excerpt: >-
@@ -238,8 +238,5 @@ The result should look similar to the picture on the right. Notice the upgraded 
 
 In this example, if you examine the Ports table you will see the ports have different capacities which doesn't make a lot of sense. In a real network WAE can discover the ports that are not being used. Selecting the checkbox Use Capacity of Existing LAG Members will use the ports that are not associated with port circuits.
 {: .notice--info}
-
-#### LAG Augmentation and L1 Circuit Activation
-In WAE 7 EFT, the ability to use the WAE Design application to deploy changes to the network for the LAG augmentation use case has been demonstrated. The testbed involved the NCS 2000 running 10.6.2 or later and the ASR 9000 running IOS-XR. The L3 LAG augmentation was performed using the Cisco Network Services Orchestrator and the L1 circuit activation uses CTC.  
 
 At this time, we are not planning to use WAE Design to deploy new L3 circuits to the network. WAE does expose APIs which can be leveraged to compute optimized paths and deployed to the network using other management and orchestration tools.
