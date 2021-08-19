@@ -50,7 +50,7 @@ The next step is to run the **license_install** command on the WAE server. Repla
 
 ```
 [wae@wae ~]$ source /home/wae/wae7/waerc
-[wae@wae ~]$ license_install -smart-lic-host 198.18.134.30 -smart-lic-port 2022 -smart-lic-username admin -smart-lic-password <password>
+[wae@wae ~]$ license_install -smart-lic-host 198.18.134.30 -smart-lic-port 2022 -smart-lic-username admin -smart-lic-password password
 License successfully installed.
 
 [wae@wae ~]$ ls /home/wae/.cariden/etc
@@ -67,7 +67,7 @@ WAE Server: "198.18.134.30"
 
 In order to do this, proceed to software.cisco.com and select **Smart Software Manager > Manage Licenses**. 
 
-Under **General > Product Instance Registration Tokens**, select New Token. Enter the description, expiry date and desired number of users. After the registration token is generated, download the  file. Use a text editor to open and copy the Token string for use in the next step.
+Under **General > Product Instance Registration Tokens**, select **New Token**. Enter the description, expiry date and desired number of users. After the registration token is generated, download the  file. Use a text editor to open and copy the **Token string** for use in the next step.
 
 
 
