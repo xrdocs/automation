@@ -1,14 +1,14 @@
 ---
 published: true
 date: '2021-08-19 14:45 +0800'
-title: wae smart licensing
+title: WAN Automation Engine smart licensing
 author: Fung Lim
 tags:
   - WAN Automation Engine
   - Smart Licensing
-excerpt: 'A primer on Cisco WAE Smart Licensing '
+excerpt: Cisco WAE Smart Licensing Primer
 ---
-## WAE Smart Licensing
+## WAN Automation Engine Smart Licensing
 
 Smart Licensing provides for a flexible software licensing model that simplifies the way you activate and manage WAE licenses across your organization. Cisco WAE has been supporting Smart Licensing since 7.2 release. This document provides a primer on using Smart Licensing on Cisco WAE.
 
