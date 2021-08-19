@@ -36,9 +36,9 @@ There are no licenses available.
 System HostID(s): 5254007e0f82
 ```
 
-### Run license_install using the WAE admin user and password
+### Run license_install on WAE server
 
-The next step is to run the **license_install** command on the WAE server. Replace password with the WAE admin user password. A **MATE_Smart.lic** file will be created under the $WAE_HOME/.cariden/etc directory.
+The next step is to run the **license_install** command on the WAE server. Replace **198.18.134.30** with the IP address of your WAE server and **password** with the WAE admin user password. A **MATE_Smart.lic** file will be created under the $WAE_HOME/.cariden/etc directory.
 
 ```
 [wae@wae ~]$ source /home/wae/wae7/waerc
@@ -51,28 +51,27 @@ MATE_Smart.lic
 [wae@wae ~]$ license_check
 There are no licenses available.
 
-WAE Server: "192.0.0.80"
+WAE Server: "198.18.134.30"
 ```
 
-### Register Cisco WAE with the Cisco Smart Software Manager
+### Generate registration token using Cisco Smart Software Manager
 
-In order to do this, Go to software.cisco.com and select Smart Software Manager > Manage Licenses.
-Undere General > Product Instance Registration Tokens, select New Token. Enter the description, expiry date and desired number of users. After the registraton token is generated, download the registration token. Use a text editor to open the Token file. Copy the Token string for use in product instance registration.
+In order to do this, proceed to software.cisco.com and select **Smart Software Manager > Manage Licenses**. 
+
+Under **General > Product Instance Registration Tokens**, select New Token. Enter the description, expiry date and desired number of users. After the registration token is generated, download the  file. Use a text editor to open and copy the Token string for use in the next step.
 
 
-### Enable Smart Licensing and register WAE server
+### Enable and register WAE server for Smart Licensing 
 
-Login to WAE Web user interface (https://<wae-ip-address>:8443/) using the admin user and password entered when installing WAE. On the WAE WebUI Dashboard, select Smart Licensing.
+Login to WAE Web UI (https://<wae-ip-address>:8443/) using the admin user and password. On the WAE Web UI Dashboard, select Smart Licensing.
   
 ![WAE WebUI Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.19.34.png)
   
 Select Enable Smart Licensing
   
 ![Enable Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.20.24.png)
-
   
 Select Register in order to register WAE with Cisco Smart Software Licensing.
-  
   
 ![Register Smart Licensing Selection]({{site.baseurl}}/images/screenshot%202021-08-19%2014.20.44.png)![screenshot 2021-08-19 14.20.44.png]({{site.baseurl}}/images/screenshot 2021-08-19 14.20.44.png)
   
@@ -86,9 +85,11 @@ You may now select the desired licenses along with the supported node count. Do 
 ![Selecting license and count]({{site.baseurl}}/images/screenshot 2021-08-19 14.25.41.png)
 
 
-## Confirm License status and count
+### Confirm License status and count
   
 The selected license and node count will be updated on the WAE Smart Licnesing UI. 
+  
+
   
 
 
