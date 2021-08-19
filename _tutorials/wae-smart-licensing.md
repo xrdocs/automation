@@ -84,7 +84,7 @@ Select Enable Smart Licensing
 Select Register in order to register WAE with Cisco Smart Software Licensing.
   
 
-![Smart Software License Registration]({{site.baseurl}}/images/screenshot 2021-08-19 21.40.05.png)
+![Smart Software License Registration]({{site.baseurl}}/images/screenshot 2021-08-19 21.51.31.png)
 
   
 Enter the Token string into the Product Instance Registration Token text box and select Register. If the registration is successful, you will be prompted with the message Registration completed successfully.
