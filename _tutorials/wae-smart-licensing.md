@@ -1,8 +1,12 @@
 ---
-published: false
+published: true
 date: '2021-08-19 14:45 +0800'
 title: wae smart licensing
 author: Fung Lim
+tags:
+  - WAN Automation Engine
+  - Smart Licensing
+excerpt: 'A primer on Cisco WAE Smart Licensing '
 ---
 ## WAE Smart Licensing
 
@@ -157,7 +161,3 @@ ML_Users                  2021 Nov 17               50                   InCompl
 
 WAE Server: "198.18.134.30"
 ```
-
-  
-  
-
