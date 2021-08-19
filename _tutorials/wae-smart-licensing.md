@@ -8,6 +8,8 @@ tags:
   - Smart Licensing
 excerpt: Cisco WAE Smart Licensing Primer
 ---
+{% include toc %}
+
 ## WAN Automation Engine Smart Licensing
 
 Smart Licensing provides for a flexible software licensing model that simplifies the way you activate and manage WAE licenses across your organization. Cisco WAE has been supporting Smart Licensing since 7.2 release. This document provides a primer on using Smart Licensing on Cisco WAE.
@@ -168,9 +170,3 @@ WAE Server: "198.18.134.30"
 At this point, you should be able to install the WAE Design Smart License by connecting it to the WAE Server.
   
 ![WAE Design Smart License]({{site.baseurl}}/images/screenshot 2021-08-19 21.59.12.png)
-  
-  
-
-  
-  
-  
