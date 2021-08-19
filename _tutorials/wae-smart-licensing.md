@@ -15,6 +15,7 @@ Before you proceed, ensure that
 At this point, there are no licenses activated or installed on the WAE server.
 
 
+
 ### Check requisites
 
 You may confirm the status of the current WAE server installation using the following commands
@@ -36,6 +37,7 @@ There are no licenses available.
 System HostID(s): 5254007e0f82
 ```
 
+
 ### Run license_install on WAE server
 
 The next step is to run the **license_install** command on the WAE server. Replace **198.18.134.30** with the IP address of your WAE server and **password** with the WAE admin user password. A **MATE_Smart.lic** file will be created under the $WAE_HOME/.cariden/etc directory.
@@ -54,11 +56,13 @@ There are no licenses available.
 WAE Server: "198.18.134.30"
 ```
 
+
 ### Generate registration token using Cisco Smart Software Manager
 
 In order to do this, proceed to software.cisco.com and select **Smart Software Manager > Manage Licenses**. 
 
 Under **General > Product Instance Registration Tokens**, select New Token. Enter the description, expiry date and desired number of users. After the registration token is generated, download the  file. Use a text editor to open and copy the Token string for use in the next step.
+
 
 
 ### Enable and register WAE server for Smart Licensing 
@@ -74,7 +78,7 @@ Select Enable Smart Licensing
 Select Register in order to register WAE with Cisco Smart Software Licensing.
   
 ![Register Smart Licensing Selection]({{site.baseurl}}/images/screenshot%202021-08-19%2014.20.44.png)![screenshot 2021-08-19 14.20.44.png]({{site.baseurl}}/images/screenshot 2021-08-19 14.20.44.png)
-  
+
   
 Enter the Token string into the Product Instance Registration Token text box and select Register. If the registration is successful, you will be prompted with the message Registration completed successfully.
 
@@ -90,7 +94,7 @@ You may now select the desired licenses along with the supported node count. Do 
 The selected license and node count will be updated on the WAE Smart Licnesing UI. 
   
 
-  
+![Confirm license and count]({{site.baseurl}}/images/screenshot 2021-08-19 14.26.47.png)  
 
 
 
