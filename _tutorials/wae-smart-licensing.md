@@ -168,6 +168,8 @@ WAE Server: "198.18.134.30"
 At this point, you should be able to install the WAE Design Smart License by connecting it to the WAE Server.
   
 ![WAE Design Smart License]({{site.baseurl}}/images/screenshot 2021-08-19 21.59.12.png)
+  
+  
 
   
   
