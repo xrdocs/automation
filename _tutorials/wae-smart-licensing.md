@@ -20,6 +20,7 @@ Before you proceed, ensure that
 
 At this point, there are no licenses activated or installed on the WAE server.
 
+Note: If you are migrating from traditional node based license, the **MATE_Dedicated.lic** license file will need to be removed from the current installation before proceeding.
 
 
 ### Check requisites
@@ -164,9 +165,11 @@ ML_Users                  2021 Nov 17               50                   InCompl
 
 WAE Server: "198.18.134.30"
 ```
-
+  
 ### Install WAE Design License
   
 At this point, you should be able to install the WAE Design Smart License by connecting it to the WAE Server.
   
 ![WAE Design Smart License]({{site.baseurl}}/images/screenshot 2021-08-19 21.59.12.png)
+  
+
