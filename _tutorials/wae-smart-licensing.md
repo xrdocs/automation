@@ -172,4 +172,7 @@ At this point, you should be able to install the WAE Design Smart License by con
   
 ![WAE Design Smart License]({{site.baseurl}}/images/screenshot 2021-08-19 21.59.12.png)
   
+After this, exit and restart the WAE Design Client. Doing a license check should show the correct licenses being installed.
+  
+![WAE Design Smart License Installed]({{site.baseurl}}/images/screenshot 2021-08-20 05.54.42.png)
 
