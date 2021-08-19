@@ -84,7 +84,7 @@ Select Register in order to register WAE with Cisco Smart Software Licensing.
   
 Enter the Token string into the Product Instance Registration Token text box and select Register. If the registration is successful, you will be prompted with the message Registration completed successfully.
 
-## Select desired licenses and node count
+### Select desired licenses and node count
   
 You may now select the desired licenses along with the supported node count. Do not press enter after entering the node count. When you are done with the selection, select Submit at the bottom of the page.
   
