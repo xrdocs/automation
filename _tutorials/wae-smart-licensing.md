@@ -98,7 +98,66 @@ The selected license and node count will be updated on the WAE Smart Licnesing U
 
 ![Confirm license and count]({{site.baseurl}}/images/screenshot 2021-08-19 14.26.47.png)  
 
+  
+Running the license_check command on the WAE server will also show the licenses associated with this instance of WAE server.
+  
+```
+[wae@wae7 ~]$ license_check
+
+Product: WAE Design
+==========================================================================================================
+
+Feature                   Expiration Date           Licensed Nodes       Status
+-----------------------------------------------------------------------------------------------------------
+MD_LSPLoadshare           2021 Nov 17               50                   InCompliance
+MD_Sim                    2021 Nov 17               50                   InCompliance
+MD_Demands                2021 Nov 17               50                   InCompliance
+MD_RSVP                   2021 Nov 17               50                   InCompliance
+MD_BGP                    2021 Nov 17               50                   InCompliance
+MD_Changeover             2021 Nov 17               50                   InCompliance
+MD_Nodes                  2021 Nov 17               50                   InCompliance
+MD_ArchiveUI              2021 Nov 17               50                   InCompliance
+MD_Users                  2021 Nov 17               50                   InCompliance
+MD_QoS                    2021 Nov 17               50                   InCompliance
+MD_ParseConfigs           2021 Nov 17               50                   InCompliance
+MD_DmdDeduct              2021 Nov 17               50                   InCompliance
+MD_ExpOptTactical         2021 Nov 17               50                   InCompliance
+MD_SimAnalysis            2021 Nov 17               50                   InCompliance
+MD_SegmentRouting         2021 Nov 17               50                   InCompliance
+MD_MetricOptTactical      2021 Nov 17               50                   InCompliance
+MD_ParseIGPDB             2021 Nov 17               50                   InCompliance
+MD_MetricOpt              2021 Nov 17               50                   InCompliance
+MD_GUI                    2021 Nov 17               50                   InCompliance
+MD_ExpOpt                 2021 Nov 17               50                   InCompliance
+
+Product: WAE Collector
+==========================================================================================================
+
+Feature                   Expiration Date           Licensed Nodes       Status
+-----------------------------------------------------------------------------------------------------------
+MC_Users                  2021 Nov 17               50                   InCompliance
+MC_BGP                    2021 Nov 17               50                   InCompliance
+MC_Login                  2021 Nov 17               50                   InCompliance
+MC_ParseIGPDB             2021 Nov 17               50                   InCompliance
+MC_ParseConfigs           2021 Nov 17               50                   InCompliance
+MC_QoS                    2021 Nov 17               50                   InCompliance
+MC_LDP                    2021 Nov 17               50                   InCompliance
+MC_SNMP                   2021 Nov 17               50                   InCompliance
+MC_RSVP                   2021 Nov 17               50                   InCompliance
+MC_Nodes                  2021 Nov 17               50                   InCompliance
 
 
+Product: WAE Live
+==========================================================================================================
 
+Feature                   Expiration Date           Licensed Nodes       Status
+-----------------------------------------------------------------------------------------------------------
+ML_Users                  2021 Nov 17               50                   InCompliance
+
+
+WAE Server: "198.18.134.30"
+```
+
+  
+ 
 
