@@ -179,6 +179,10 @@ After this, perform a license refresh and/or exit and restart the WAE Design Cli
 Note: the WAE Server NETCONF port (2022 by default) must always be reachable by the WAE Design client for Smart Licensing to be used.  
   
   
+### Troubleshooting
+  
+On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. $WAE_RUN/packages/cisco-wae-nimo/priv/work/<network>/lfi_igpconfig1.log will contain essential information pertaining to licensing. Together with $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, we will be help determine issues if any.
+  
 
   
 
