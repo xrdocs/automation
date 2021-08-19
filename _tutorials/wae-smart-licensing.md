@@ -18,6 +18,7 @@ At this point, there are no licenses activated or installed on the WAE server.
 ### Check requisites
 
 You may confirm the status of the current WAE server installation using the following commands
+
 ```
 [wae@wae ~]$ supervisorctl status
 wae:kafka                        RUNNING   pid 6519, uptime 0:06:04
@@ -26,6 +27,7 @@ wae:wae-monitor                  RUNNING   pid 6517, uptime 0:06:04
 wae:waectl                       RUNNING   pid 6516, uptime 0:06:04
 wae:zookeeper                    RUNNING   pid 6515, uptime 0:06:04
 ```
+
 ```
 [wae@wae ~]$ license_check
 License files searched:
