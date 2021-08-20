@@ -6,21 +6,23 @@ author: Fung Lim
 tags:
   - WAN Automation Engine
   - Smart Licensing
-excerpt: Cisco WAE Smart Licensing Primer
+excerpt: >-
+  This primer provides an introduction to setting up Cisco WAE Server and Design
+  Client for Smart Licensing
 ---
 {% include toc %}
 
 ## WAN Automation Engine Smart Licensing
 
-Smart Licensing provides for a flexible software licensing model that simplifies the way you activate and manage WAE licenses across your organization. Cisco WAE has been supporting Smart Licensing since 7.2 release. This document provides a primer on using Smart Licensing on Cisco WAE.
+Smart Licensing provides a flexible software licensing model that simplifies how you activate and manage WAE licenses across your organization. Cisco WAE has been supporting Smart Licensing since 7.2 release. This document provides a primer on using Smart Licensing on Cisco WAE.
 
 Before you proceed, ensure that
-* You have a valid SMART Account with administration priviledges.
+* You have a valid SMART Account with administration privileges.
 * Cisco WAE server has been installed and is in RUNNING state.
 
-At this point, there are no licenses activated or installed on the WAE server.
+At this point, no licenses have been activated or installed on the WAE server.
 
-Note: If you are migrating from traditional node based license, the **MATE_Dedicated.lic** license file will need to be removed from the current installation before proceeding.
+Note: If you are migrating from a traditional node-based license, the **MATE_Dedicated.lic** license file will need to be removed from the current installation before proceeding.
 
 
 ### Check requisites
@@ -49,11 +51,11 @@ System HostID(s): 5254007e0f82
 
 ### Run license_install on WAE server
 
-The next step is to run the **license_install** command on the WAE server. Replace **198.18.134.30** with the IP address of your WAE server and **password** with the WAE admin user password. A **MATE_Smart.lic** file will be created under the $WAE_HOME/.cariden/etc directory.
+The next step is to run the **license_install** command on the WAE server. Replace **198.18.134.30** with the IP address of your WAE server and **mypassword** with the WAE admin user password. Smart Licensing will create a **MATE_Smart.lic** file under the **$WAE_HOME/.cariden/etc** directory.
 
 ```
 [wae@wae ~]$ source /home/wae/wae7/waerc
-[wae@wae ~]$ license_install -smart-lic-host 198.18.134.30 -smart-lic-port 2022 -smart-lic-username admin -smart-lic-password password
+[wae@wae ~]$ license_install -smart-lic-host 198.18.134.30 -smart-lic-port 2022 -smart-lic-username admin -smart-lic-password mypassword
 License successfully installed.
 
 [wae@wae ~]$ ls /home/wae/.cariden/etc
@@ -68,46 +70,45 @@ WAE Server: "198.18.134.30"
 
 ### Generate registration token using Cisco Smart Software Manager
 
-In order to do this, proceed to software.cisco.com and select **Smart Software Manager > Manage Licenses**. 
+The next step is to generate a registration token to register the WAE Server with Smart Licensing. Proceed to software.cisco.com and select **Smart Software Manager > Manage Licenses**. 
 
-Under **General > Product Instance Registration Tokens**, select **New Token**. Enter the description, expiry date and desired number of users. After the registration token is generated, download the  file. Use a text editor to open and copy the **Token string** for use in the next step.
+Under **General > Product Instance Registration Tokens**, select **New Token**. Enter the description, expiry date, and desired number of users. After the registration token is generated, download the file. Use a text editor to open and copy the **Token string** for use in the next step.
 
 
 
 ### Enable and register WAE server for Smart Licensing 
 
-Login to WAE Web UI (https://<wae-ip-address>:8443/) using the admin user and password. On the WAE Web UI Dashboard, select Smart Licensing.
+Login to WAE Web UI (https://<wae-ip-address>:8443/) using the admin user and password. On the WAE Web UI Dashboard, select **Smart Licensing**.
   
 ![WAE WebUI Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.19.34.png)
   
-Select Enable Smart Licensing
+
+Next, select **Enable Smart Licensing**
   
 ![Enable Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.20.24.png)
   
-Select Register in order to register WAE with Cisco Smart Software Licensing.
+Then, select **Register** in order to register WAE server with Cisco Smart Software Licensing.
   
 
 ![Smart Software License Registration]({{site.baseurl}}/images/screenshot 2021-08-19 21.51.31.png)
 
   
-Enter the Token string into the Product Instance Registration Token text box and select Register. If the registration is successful, you will be prompted with the message Registration completed successfully.
+Enter the **Token string** into the registration token text box and select **Register**. If the registration is successful, you will be prompted **Registration completed successfully**.
 
 ### Select desired licenses 
   
-You may now select the desired licenses along with the node count. **Do not press enter after entering the required node count**. When you are done with the selection, select **Submit** at the bottom of the page.
+You may select the desired licenses and node count. **Do not press enter after entering the node count**. When you are done with selection, select **Submit** at the bottom of the page.
   
 ![Selecting Required Licenses]({{site.baseurl}}/images/screenshot 2021-08-19 21.40.44.png)
 
 
 ### Confirm License status 
   
-After refreshing the page, the selected license and node count will be displayed on the WAE Smart Licensing UI. 
- 
+The selected license and node count will be displayed on the WAE Smart Licensing UI after a page refresh. 
 
 ![Confirm license and count]({{site.baseurl}}/images/screenshot 2021-08-19 14.26.47.png)  
-
   
-Running the **license_check** command on the WAE server will also show the licenses associated with this instance of WAE server.
+Running the **license_check** command on the WAE server will show the corresponding feature licenses associated with the WAE server, together with the expiration date, licensed nodes and compliance status.
   
 ```
 [wae@wae7 ~]$ license_check
@@ -168,21 +169,19 @@ WAE Server: "198.18.134.30"
   
 ### Install WAE Design License
   
-At this point, you should be able to install the WAE Design Smart License by connecting it to the WAE Server.
+Start WAE Design client, and select File > License > Install. Select **Use smart license**. Enable WAE Design for Smart Licensing by entering the WAE Server details and then selecting Ok.
   
 ![WAE Design Smart License]({{site.baseurl}}/images/screenshot 2021-08-19 21.59.12.png)
   
-After this, perform a license refresh and/or exit and restart the WAE Design Client. Doing a license check should show the correct licenses being installed.
+Perform a license refresh and then restart the WAE Design Client. License check will show the installed licenses.
   
 ![WAE Design Smart License Installed]({{site.baseurl}}/images/screenshot 2021-08-20 05.54.42.png)
   
-Note: the WAE Server NETCONF port (2022 by default) must always be reachable by the WAE Design client for Smart Licensing to be used.  
+Note: the WAE Server NETCONF port (2022 by default) must always be reachable from the WAE Design client for Smart Licensing.
   
   
 ### Troubleshooting
   
-On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. $WAE_RUN/packages/cisco-wae-nimo/priv/work/<network>/lfi_igpconfig1.log will contain essential information pertaining to licensing. Together with $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, we will be help determine issues if any.
+On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. Files in $WAE_RUN/packages/cisco-wae-nimo/priv/work/<network>/ will contain essential information pertaining to licensing. $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, will also contain information associated with licensing.
   
-
   
-
