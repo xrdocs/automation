@@ -80,7 +80,7 @@ Under **General > Product Instance Registration Tokens**, select **New Token**. 
 
 ### Enable and register WAE server for Smart Licensing 
 
-Login to WAE Web UI (https://<wae-ip-address>:8443/) using the admin user and password. On the WAE Web UI Dashboard, select **Smart Licensing**.
+Login to WAE Web UI (https://\<wae-ip-address\>:8443/) using the admin user and password. On the WAE Web UI Dashboard, select **Smart Licensing**.
   
 ![WAE WebUI Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.19.34.png)
   
