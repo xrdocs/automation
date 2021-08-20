@@ -22,7 +22,10 @@ Before you proceed, ensure that
 
 At this point, no licenses have been activated or installed on the WAE server.
 
-Note: If you are migrating from a traditional node-based license, the **MATE_Dedicated.lic** license file will need to be removed from the current installation before proceeding.
+Note: 
+* If you are migrating from a traditional node-based license, the **MATE_Dedicated.lic** license file will need to be removed from the current installation before proceeding. 
+
+* If you are using WAE function packs, the license file (WAEFUNCTIONPACKS.lic) will still need to be copied to the $HOME/.cariden/etc directory even if Smart Licensing is enabled. 
 
 
 ### Check requisites
