@@ -53,11 +53,11 @@ System HostID(s): 5254007e0f82
 
 ### Run license_install on WAE server
 
-The next step is to run the **license_install** command on the WAE server. Replace **198.18.134.30** with the IP address of your WAE server and **mypassword** with the WAE admin user password. Smart Licensing will create a **MATE_Smart.lic** file under the **$WAE_HOME/.cariden/etc** directory.
+The next step is to run the **license_install** command on the WAE server. Replace **198.18.134.30** with the IP address of your WAE server and \<password\> with the WAE admin user password. Smart Licensing will create a **MATE_Smart.lic** file under the **$WAE_HOME/.cariden/etc** directory.
 
 ```
 [wae@wae ~]$ source /home/wae/wae7/waerc
-[wae@wae ~]$ license_install -smart-lic-host 198.18.134.30 -smart-lic-port 2022 -smart-lic-username admin -smart-lic-password mypassword
+[wae@wae ~]$ license_install -smart-lic-host 198.18.134.30 -smart-lic-port 2022 -smart-lic-username admin -smart-lic-password <password>
 License successfully installed.
 
 [wae@wae ~]$ ls /home/wae/.cariden/etc
