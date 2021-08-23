@@ -1,9 +1,21 @@
 ---
-published: false
+published: true
 date: '2021-08-23 14:43 +0800'
 title: >-
   Using Cisco WAE to retrieve real-time network model from Crosswork
   Optimization Engine
+author: Fung Lim
+excerpt: >-
+  Crosswork Optimization Engine provides a RESTCONF based API which allows for
+  the real-time network model to be retrieved. The Optimization Engine and WAN
+  Automation Engine uses the same schema which allows network models to be used
+  interchangeably across the two platforms, allowing for a multitude of capacity
+  management use cases to be addressed by these two products.
+tags:
+  - Crosswork
+  - Crosswork Optimization Engine
+  - WAN Automation Engine
+  - Plan File
 ---
 {% include toc %}
 
@@ -75,6 +87,9 @@ Once the plan file has been decoded, WAE Design Client may be used to open the n
 
 ![WAE Design Client UI]({{site.baseurl}}/images/screenshot 2021-08-23 14.42.45.png)
 
+For example, the following shows the worst case traffic view as a result of a simulation analysis being performed on the network model.
+
+![WAE Design WC traffic view]({{site.baseurl}}/images/screenshot 2021-08-23 15.39.17.png)
 
 
 
