@@ -2,7 +2,7 @@
 published: true
 date: '2021-08-19 14:45 +0800'
 title: WAN Automation Engine smart licensing
-author: Lim Fung
+author: Fung Lim
 tags:
   - WAN Automation Engine
   - Smart Licensing
@@ -185,5 +185,3 @@ Note: the WAE Server NETCONF port (2022 by default) must always be reachable fro
 ### Troubleshooting
   
 On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. Files in $WAE_RUN/packages/cisco-wae-nimo/priv/work/\<network\>/ will contain essential information pertaining to licensing. $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, will also contain information associated with licensing.
-
-
