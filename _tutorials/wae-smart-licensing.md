@@ -14,7 +14,7 @@ excerpt: >-
 
 ## WAN Automation Engine Smart Licensing
 
-Smart Licensing provides a flexible software licensing model that simplifies how you activate and manage WAE licenses across your organization. Cisco WAE has been supporting Smart Licensing since 7.2 release. This document provides a primer on using Smart Licensing on Cisco WAE.
+Smart Licensing provides a flexible software licensing model that simplifies how you activate and manage WAE licenses across your organization. Cisco WAE has been supporting Smart Licensing since the 7.2 release. This document provides a primer on using Smart Licensing on Cisco WAE.
 
 Before you proceed, ensure that
 * You have a valid SMART Account with administration privileges.
@@ -24,7 +24,7 @@ At this point, no licenses have been activated or installed on the WAE server.
 
 Note: 
 * If you are migrating from a traditional node-based license, the **MATE_Dedicated.lic** license file will need to be removed from the current installation before proceeding. 
-* If you are using WAE function packs, the license file (WAEFUNCTIONPACKS.lic) will still need to be copied to the $HOME/.cariden/etc directory even if Smart Licensing is enabled. 
+* If you use WAE function packs, the function pack license (WAEFUNCTIONPACKS.lic) will need to be copied to the $HOME/.cariden/etc directory even if smart licensing is enabled. 
 
 
 ### Check requisites
@@ -85,17 +85,17 @@ Login to WAE Web UI (https://\<wae-ip-address\>:8443/) using the admin user and 
 ![WAE WebUI Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.19.34.png)
   
 
-Next, select **Enable Smart Licensing**
+Next, select **Enable Smart Licensing**.
   
 ![Enable Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.20.24.png)
   
-Then, select **Register** in order to register WAE server with Cisco Smart Software Licensing.
+Then, select **Register** to register WAE server with Cisco Smart Software Licensing.
   
 
 ![Smart Software License Registration]({{site.baseurl}}/images/screenshot 2021-08-19 21.51.31.png)
 
   
-Enter the **Token string** into the registration token text box and select **Register**. If the registration is successful, you will be prompted **Registration completed successfully**.
+Enter the **Token string** into the registration token text box and select **Register**. If registration is successful, you will be prompted **Registration completed successfully**.
 
 ### Select desired licenses 
   
@@ -106,11 +106,11 @@ You may select the desired licenses and node count. **Do not press enter after e
 
 ### Confirm License status 
   
-The selected license and node count will be displayed on the WAE Smart Licensing UI after a page refresh. 
+The WAE Smart Licensing UI will display the selected license and node count after a page refresh.
 
 ![Confirm license and count]({{site.baseurl}}/images/screenshot 2021-08-19 14.26.47.png)  
   
-Running the **license_check** command on the WAE server will show the corresponding feature licenses associated with the WAE server, together with the expiration date, licensed nodes and compliance status.
+Running the **license_check** command on the WAE server will show the corresponding feature licenses associated with the WAE server, together with the expiration date, licensed nodes, and compliance status.
   
 ```
 [wae@wae7 ~]$ license_check
@@ -184,4 +184,6 @@ Note: the WAE Server NETCONF port (2022 by default) must always be reachable fro
   
 ### Troubleshooting
   
-On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. Files in $WAE_RUN/packages/cisco-wae-nimo/priv/work/<network>/ will contain essential information pertaining to licensing. $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, will also contain information associated with licensing.
+On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. Files in $WAE_RUN/packages/cisco-wae-nimo/priv/work/\<network\>/ will contain essential information pertaining to licensing. $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, will also contain information associated with licensing.
+
+
