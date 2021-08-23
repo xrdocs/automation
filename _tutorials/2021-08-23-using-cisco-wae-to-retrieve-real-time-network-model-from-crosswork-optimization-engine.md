@@ -28,6 +28,14 @@ The network model in optimization comprise of devices (nodes, links) as well as 
 
 ## Retrieving network model using Crosswork RESTCONF API
 
+In order to retrieve the network model in Optimization Engine, we leverage on the RESTCONF APIs exposed by the Optimization Engine.  The details of these RESTCONF APIs are documented on DevNet under [Optimization Engine Operations](https://developer.cisco.com/docs/crosswork/#!crosswork-optimization-engine-apis-2-0-release-apis-optimization-engine-operations).
+
+
+![Plan file export using Crosswork RESTCONF API]({{site.baseurl}}/images/screenshot 2021-08-23 15.23.54.png)
+
+The following shows an example of a shell script used to retrieve the optimization engine model using curl. Note that the first two curl calls are used for retrieving the tgt_token and jwt_token which are required for authenticating the actual get-plan call.
+
+
 ```
 #!/bin/sh
 
@@ -35,7 +43,7 @@ host='198.18.134.219'
 tgt_token=`curl -k -X POST https://${host}:30603/crosswork/sso/v1/tickets \
   -H 'Content-Type: application/x-www-form-urlencoded' \
   -H 'Accept: text/plain' \
-  -d 'username=admin&password=C!sco12345'`
+  -d 'username=admin&password=Password'`
 
 # Get JWT token:
 
@@ -51,6 +59,9 @@ curl -k -X POST \
   -d '{"input":{"version":"7.4","format":"pln"}}'
 
 ```
+
+The output of the curl command then needs to be 
+
 
 ## WAN Automation Engine
 
