@@ -38,7 +38,7 @@ The screenshot below shows a network managed by the Crosswork Optimization Engin
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/screenshot 2021-08-23 14.31.07.png)
 
-The network comprise of devices (nodes, links) as well as Segment Routing Traffic Engineering (SR-TE) policies. Crosswork Optimization Engine provides the user with a real-time view of the topology and traffic on its web based user interface.
+The network model comprise of devices (nodes, links) as well as Segment Routing Traffic Engineering (SR-TE) policies and additional attributes collected from the physical network. Crosswork Optimization Engine provides the user with a real-time view of the topology and traffic on its web based user interface.
 
 ## Using Crosswork RESTCONF API
 
