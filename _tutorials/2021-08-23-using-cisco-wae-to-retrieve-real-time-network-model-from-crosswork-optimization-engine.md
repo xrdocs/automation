@@ -20,7 +20,7 @@ This tutorial demonstrates how the real-time network model in Crosswork Optimiza
 
 ## Crosswork Optimization Engine
 
-The screenshot below shows an existing network managed by the Crosswork Optimization Engine. The network model comprise of devices (nodes, links) as well as Segment Routing Traffic Engineering (SR-TE) policies.
+The screenshot below shows a network managed by the Crosswork Optimization Engine. The network model comprise of devices (nodes, links) as well as Segment Routing Traffic Engineering (SR-TE) policies.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/screenshot 2021-08-23 14.31.07.png)
 
