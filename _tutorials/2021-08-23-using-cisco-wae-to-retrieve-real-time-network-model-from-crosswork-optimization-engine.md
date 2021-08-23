@@ -33,7 +33,7 @@ In order to retrieve the network model in Optimization Engine, we leverage on th
 
 ![Plan file export using Crosswork RESTCONF API]({{site.baseurl}}/images/screenshot 2021-08-23 15.23.54.png)
 
-The following shows an example of a shell script used to retrieve the optimization engine model using curl. Note that the first two curl calls are used for retrieving the tgt_token and jwt_token which are required for authenticating the actual get-plan call.
+The following shows an example of a shell script used to retrieve the optimization engine model using curl. The first two curl calls are used for retrieving the tgt_token and jwt_token which are required for authenticating the actual get-plan call.
 
 
 ```
