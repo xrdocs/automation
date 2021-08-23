@@ -1,14 +1,16 @@
 ---
 published: true
 date: '2021-08-23 14:43 +0800'
-title: Using Cisco WAE for simulating networks from Crosswork Optimization Engine
+title: >-
+  Using Cisco WAE to run simulation on network models from Crosswork
+  Optimization Engine
 author: Fung Lim
 excerpt: >-
-  Crosswork Optimization Engine provides a RESTCONF based API which allows for
-  the real-time network model to be retrieved. The Optimization Engine and WAN
-  Automation Engine uses the same schema which allows network models to be used
-  interchangeably across the two platforms, allowing for a multitude of capacity
-  management use cases to be addressed by these two products.
+  The Crosswork Optimization Engine provides a RESTCONF based API which allows
+  for the real-time network model to be retrieved. The Optimization Engine and
+  WAN Automation Engine uses the same schema which allows network models to be
+  used interchangeably across the two platforms, allowing for a multitude of
+  capacity management use cases to be addressed by these two products.
 tags:
   - Crosswork
   - Crosswork Optimization Engine
