@@ -53,7 +53,7 @@ The get-plan RESTCONF request allows the user to specify the schema version comp
 base64 --decode /tmp/encoded.txt > /tmp/decoded.txt
 ```
 
-The following provides an example of a complete shell script to retrieve the optimization engine model using curl. The first two curl calls are used to retrieve the tgt_token and jwt_token which are required for authenticating the actual get-plan request.
+The following provides an example of a complete shell script to retrieve the optimization engine model using curl. The first two curl calls are used to retrieve the JWT service ticket (tgt_token) and JSON web token (jwt_token) which are required for the actual get-plan request.
 
 
 ```
