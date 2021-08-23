@@ -47,7 +47,7 @@ In order to retrieve the network model from Optimization Engine, we leverage the
 ![Plan file export using Crosswork RESTCONF API]({{site.baseurl}}/images/screenshot 2021-08-23 15.23.54.png)
 
 
-The get-plan RESTCONF request allows the user to specify the schema version compatible with the WAE Design client in use (7.4 as above) and the plan file format (.txt or .pln). To find out what version schema your WAE Design client supports, select About WAE Design on the menu bar. Regardless of the parameters specified, the plan file is returned as a base64 encoded field in JSON body. The user may use utilities such as base64 to decode the encoded plan file.
+The get-plan Optimization Engine operations RESTCONF request allows the user to specify the schema version compatible with the WAE Design client in use (7.4 as above) and the plan file format (.txt or .pln). To find out what version schema your WAE Design client supports, select About WAE Design on the menu bar. Regardless of the parameters specified, the plan file is returned as a base64 encoded field in JSON body. The user may use utilities such as base64 to decode the encoded plan file.
 
 ```
 base64 --decode /tmp/encoded.txt > /tmp/decoded.txt
