@@ -32,7 +32,7 @@ The WAN Automation Engine is also useful for simulation analysis, in determining
 
 This tutorial demonstrates how the real-time network model in Crosswork Optimization Engine can be retrieved and used in WAN Automation Engine for capacity management and simulation analysis purposes.
 
-## Crosswork Optimization Engine
+## Crosswork Optimization Engine model
 
 The screenshot below shows a network managed by the Crosswork Optimization Engine. 
 
@@ -40,7 +40,7 @@ The screenshot below shows a network managed by the Crosswork Optimization Engin
 
 The network comprise of devices (nodes, links) as well as Segment Routing Traffic Engineering (SR-TE) policies. Crosswork Optimization Engine provides the user with a real-time view of the topology and traffic on its web based user interface.
 
-## Retrieving network model using Crosswork RESTCONF API
+## Using Crosswork RESTCONF API
 
 In order to retrieve the network model from Optimization Engine, we leverage the Crosswork RESTCONF APIs exposed by the Optimization Engine. The details of these RESTCONF APIs are documented on DevNet under [Optimization Engine Operations](https://developer.cisco.com/docs/crosswork/#!crosswork-optimization-engine-apis-2-0-release-apis-optimization-engine-operations).
 
@@ -83,9 +83,9 @@ curl -k -X POST \
 The output of the curl command needs to be saved to file, parsed and decoded.
 
 
-## WAN Automation Engine
+## Using WAE Design Client 
 
-Once the plan file has been decoded, WAE Design Client may be used to open the network model. Simulations can be performed on the plan file as though the file was retrieved from a WAE Automation Server.
+Once the plan file has been decoded, WAE Design Client may be used to open the network model. Simulations can be performed on the plan file as though the network model was retrieved from a WAE Automation Server.
 
 ![Opening Network Model using WAE Design Client]({{site.baseurl}}/images/screenshot 2021-08-23 14.42.45_2.png)
 
