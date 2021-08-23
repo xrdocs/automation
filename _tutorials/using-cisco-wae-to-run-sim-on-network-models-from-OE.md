@@ -90,6 +90,6 @@ Once the plan file has been decoded, WAE Design Client may be used to open the n
 ![Opening Network Model from WAE Design Client ]({{site.baseurl}}/images/screenshot 2021-08-23 15.38.41.png)
 
 
-For example, the following shows the worst case traffic view as a result of a simulation analysis being performed on the network model.
+For example, the following shows the worst case traffic view as a result of a simulation analysis being performed on the network model. More simulation capabilities such as those described in [WAE Design Quick Start Guide](https://developer.cisco.com/docs/wan-automation-engine/#!wae-design-quick-start-guide) may be performed.
 
 ![WAE Design WC traffic view]({{site.baseurl}}/images/screenshot 2021-08-23 15.39.17.png)
