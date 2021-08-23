@@ -85,12 +85,11 @@ The output of the curl command needs to be saved to file, parsed and decoded.
 
 Once the plan file has been decoded, WAE Design Client may be used to open the network model. Simulations can be performed on the plan file as though the file was retrieved from a WAE Automation Server.
 
-![WAE Design Client UI]({{site.baseurl}}/images/screenshot 2021-08-23 14.42.45.png)
+![Opening Network Model from WAE Design Client ]({{site.baseurl}}/images/screenshot 2021-08-23 15.38.41.png)
+
 
 For example, the following shows the worst case traffic view as a result of a simulation analysis being performed on the network model.
 
 ![WAE Design WC traffic view]({{site.baseurl}}/images/screenshot 2021-08-23 15.39.17.png)
-
-
 
 
