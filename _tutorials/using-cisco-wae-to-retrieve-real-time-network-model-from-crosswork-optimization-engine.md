@@ -2,7 +2,7 @@
 published: true
 date: '2021-08-23 14:43 +0800'
 title: >-
-  Using Cisco WAE to retrieve real-time network model from Crosswork
+  Using Cisco WAE for simulations using network model from Crosswork
   Optimization Engine
 author: Fung Lim
 excerpt: >-
