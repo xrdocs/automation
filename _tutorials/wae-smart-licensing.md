@@ -184,4 +184,10 @@ Note: the WAE Server NETCONF port (2022 by default) must always be reachable fro
   
 ### Troubleshooting
   
+If smart licensing is in use, WAE would search for MATE_Smart.lic under the following directories (in this order)
+
+* $CARIDEN_ROOT/etc/
+* $CARIDEN_HOME/etc/
+* $HOME/.cariden/etc/
+
 On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. Files in $WAE_RUN/packages/cisco-wae-nimo/priv/work/\<network\>/ will contain essential information pertaining to licensing. $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, will also contain information associated with licensing.
