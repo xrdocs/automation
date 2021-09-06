@@ -10,7 +10,8 @@ tags:
   - ZTP
   - SZTP
 excerpt: >-
-  This primer provides an introduction to setting up Crosswork for Secure Zero Touch Provisioning (SZTP)
+  This primer provides an introduction to setting up Crosswork for Secure Zero
+  Touch Provisioning (SZTP)
 ---
 {% include toc %}
 
@@ -38,4 +39,19 @@ If any of the validation steps fail, Secure ZTP posts a Provisioning Error. If t
 
 ## Configuring Crosswork for Secure ZTP (SZTP)
 
-First, ensure that the ZTP application is installed and fully functional. You may verify the status of Crosswork applications by going to Administration > Crosswork Manager > Zero Touch Provisioning. The status indicator under the Zero Touch Provisioning should be in green and indicate that the application is Healthy.
+### Install ZTP application
+
+First, ensure that the ZTP application is installed and fully functional. You may verify the status of Crosswork applications by going to Administration > Crosswork Manager > Zero Touch Provisioning. The status indicator under the Zero Touch Provisioning should be in green and this indicates that the application is Healthy.
+
+![Crosswork Manager Screenshot]({{site.baseurl}}/images/ztp_screen00.png)
+
+## Upload ZTP certificates
+
+The next step involves uploading the ZTP certificates onto Crosswork. 
+
+![ztp_screen01.png]({{site.baseurl}}/images/ztp_screen01.png)
+
+
+
+
+
