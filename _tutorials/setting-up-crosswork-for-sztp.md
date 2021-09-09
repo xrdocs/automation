@@ -48,7 +48,27 @@ First, ensure that the ZTP application is installed and fully functional. You ma
 The next step involves uploading the ZTP certificates onto Crosswork. 
 
 
+![Image 000]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img000.png)
 
+![Image 001]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img001.png)
+
+![Image 002]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img002.png)
+
+![Image 003]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img003.png)
+
+![Image 004]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img004.png)
+
+![Image 005]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img005.png)
+
+![Image 006]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img006.png)
+
+![Image 007]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img007.png)
+
+![Image 008]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img008.png)
+
+![Image 009]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img009.png)
+
+![Image 010]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img010.png)
 
 
 
