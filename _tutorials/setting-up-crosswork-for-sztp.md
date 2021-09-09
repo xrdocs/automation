@@ -41,7 +41,7 @@ If any of the validation steps fail, Secure ZTP posts a Provisioning Error. If t
 
 ### Install ZTP application
 
-First, ensure that the ZTP application is installed and fully functional. You may verify the status of Crosswork applications by going to Administration > Crosswork Manager > Zero Touch Provisioning. The status indicator under the Zero Touch Provisioning should be in green and this indicates that the application is Healthy.
+First, ensure that the ZTP application is installed and fully functional. You may verify the status of Crosswork applications by going to **Administration > Crosswork Manager > Zero Touch Provisioning**. The status indicator under the Zero Touch Provisioning should be in **green** and this indicates that the application is Healthy.
 
 ![Image 000]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img000.png)
 

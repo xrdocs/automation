@@ -184,10 +184,18 @@ Note: the WAE Server NETCONF port (2022 by default) must always be reachable fro
   
 ### Troubleshooting
   
-If smart licensing is in use, WAE would search for MATE_Smart.lic under the following directories (in this order)
+Cisco WAE searchs for MATE_Smart.lic (if Smart Licensing is used) in the following order.
 
 * $CARIDEN_ROOT/etc/
 * $CARIDEN_HOME/etc/
 * $HOME/.cariden/etc/
+
+The $HOME variable is defined in wae.ini and is apparent (under -home parameter) when we perform a ps auxw on the WAE server to search for the ncs.smp process, e.g.
+
+```
+[root@wae]# ps auxw | grep ncs.smp
+wae         2792  4.8  0.3 4535464 221504 ?      Sl   05:58   0:07 /home/wae/wae7/lib/ext/nso/lib/ncs/erts/bin/ncs.smp -K true -P 4000000 -- -root /home/wae/wae7/lib/ext/nso/lib/ncs -progname ncs -- -home /home/wae -- -pa /home/wae/wae7/lib/ext/nso/lib/ncs/patches -boot ncs -ncs true -noshell -noinput -foreground -yaws embedded true -kernel gethost_poolsize 16 -stacktrace_depth 24 -shutdown_time 30000 -conffile /home/wae/wae-run/wae.conf -max_fds 1000000 --
+
+```
 
 On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. Files in $WAE_RUN/packages/cisco-wae-nimo/priv/work/\<network\>/ will contain essential information pertaining to licensing. $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, will also contain information associated with licensing.
