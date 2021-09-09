@@ -82,17 +82,17 @@ Under **General > Product Instance Registration Tokens**, select **New Token**. 
 
 Login to WAE Web UI (https://\<wae-ip-address\>:8443/) using the admin user and password. On the WAE Web UI Dashboard, select **Smart Licensing**.
   
-![WAE WebUI Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.19.34.png)
+![WAE WebUI Smart Licensing Selection]({{site.baseurl}}/images/wae-smart-licensing-img000.png)
   
 
 Next, select **Enable Smart Licensing**.
   
-![Enable Smart Licensing Selection]({{site.baseurl}}/images/screenshot 2021-08-19 14.20.24.png)
+![Enable Smart Licensing Selection]({{site.baseurl}}/images/wae-smart-licensing-img001.png)
   
 Then, select **Register** to register WAE server with Cisco Smart Software Licensing.
   
 
-![Smart Software License Registration]({{site.baseurl}}/images/screenshot 2021-08-19 21.51.31.png)
+![Smart Software License Registration]({{site.baseurl}}/images/wae-smart-licensing-img002.png)
 
   
 Enter the **Token string** into the registration token text box and select **Register**. If registration is successful, you will be prompted **Registration completed successfully**.
@@ -101,14 +101,14 @@ Enter the **Token string** into the registration token text box and select **Reg
   
 You may select the desired licenses and node count. **Do not press enter after entering the node count**. When you are done with selection, select **Submit** at the bottom of the page.
   
-![Selecting Required Licenses]({{site.baseurl}}/images/screenshot 2021-08-19 21.40.44.png)
+![Selecting Required Licenses]({{site.baseurl}}/images/wae-smart-licensing-img003.png)
 
 
 ### Confirm License status 
   
 The WAE Smart Licensing UI will display the selected license and node count after a page refresh.
 
-![Confirm license and count]({{site.baseurl}}/images/screenshot 2021-08-19 14.26.47.png)  
+![Confirm license and count]({{site.baseurl}}/images/wae-smart-licensing-img004.png)  
   
 Running the **license_check** command on the WAE server will show the corresponding feature licenses associated with the WAE server, together with the expiration date, licensed nodes, and compliance status.
   
@@ -173,11 +173,11 @@ WAE Server: "198.18.134.30"
   
 Start WAE Design client, and select File > License > Install. Select **Use smart license**. Enable WAE Design for Smart Licensing by entering the WAE Server details and then selecting Ok.
   
-![WAE Design Smart License]({{site.baseurl}}/images/screenshot 2021-08-19 21.59.12.png)
+![WAE Design Smart License]({{site.baseurl}}/images/wae-smart-licensing-img005.png)
   
 Perform a license refresh and then restart the WAE Design Client. License check will show the installed licenses.
   
-![WAE Design Smart License Installed]({{site.baseurl}}/images/screenshot 2021-08-20 05.54.42.png)
+![WAE Design Smart License Installed]({{site.baseurl}}/images/wae-smart-licensing-img006.png)
   
 Note: the WAE Server NETCONF port (2022 by default) must always be reachable from the WAE Design client for Smart Licensing.
   
