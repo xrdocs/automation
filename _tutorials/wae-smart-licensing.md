@@ -190,12 +190,23 @@ Cisco WAE searchs for MATE_Smart.lic (if Smart Licensing is used) in the followi
 * $CARIDEN_HOME/etc/
 * $HOME/.cariden/etc/
 
-The $HOME variable is defined in wae.ini and is apparent (under -home parameter) when we perform a ps auxw on the WAE server to search for the ncs.smp process, e.g.
+The $HOME variable is defined in wae.ini (symlinked from /etc/supervisor.d/wae.ini). 
+
+```
+[program:waectl]
+user=wae
+# The NCS_JAVA_VM_OPTIONS env variable can be set below to modify the jvm heap/stack size and other jvm parameters
+environment=HOME="/home/wae", NCS_JAVA_VM_OPTIONS="-Xmx16G -Xms4G -XX:+UseG1GC -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/home/wae/wae-run/logs/ -Djava.io.tmpdir=/home/wae/wae-run/work/", TMPDIR="/home/wae/wae-run/work/"
+```
+
+This is apparent (under -home parameter) when we perform a ps auxw on the WAE server to search for the ncs.smp process, e.g.
 
 ```
 [root@wae]# ps auxw | grep ncs.smp
 wae         2792  4.8  0.3 4535464 221504 ?      Sl   05:58   0:07 /home/wae/wae7/lib/ext/nso/lib/ncs/erts/bin/ncs.smp -K true -P 4000000 -- -root /home/wae/wae7/lib/ext/nso/lib/ncs -progname ncs -- -home /home/wae -- -pa /home/wae/wae7/lib/ext/nso/lib/ncs/patches -boot ncs -ncs true -noshell -noinput -foreground -yaws embedded true -kernel gethost_poolsize 16 -stacktrace_depth 24 -shutdown_time 30000 -conffile /home/wae/wae-run/wae.conf -max_fds 1000000 --
 
 ```
+
+Check that the MATE_Smart.lic file exists in the correct directory. If the wae.ini configuration file has been modified, ensure that **supervisorctl reload** has been performed. 
 
 On the WAE Server, set verbosity to 60 (debug) for the respective nimos prior to running a collection. Files in $WAE_RUN/packages/cisco-wae-nimo/priv/work/\<network\>/ will contain essential information pertaining to licensing. $WAE_RUN/logs/wae-java-vm.log and $WAE_RUN/logs/cisco-wae-smart-license.log, will also contain information associated with licensing.
