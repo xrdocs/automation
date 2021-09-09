@@ -43,26 +43,41 @@ If any of the validation steps fail, Secure ZTP posts a Provisioning Error. If t
 
 First, ensure that the ZTP application is installed and fully functional. You may verify the status of Crosswork applications by going to Administration > Crosswork Manager > Zero Touch Provisioning. The status indicator under the Zero Touch Provisioning should be in green and this indicates that the application is Healthy.
 
+![Image 000]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img000.png)
+
 ## Upload ZTP certificates
 
-The next step involves uploading the ZTP certificates onto Crosswork. 
-
-
-![Image 000]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img000.png)
+The next step involves uploading the ZTP certificates onto Crosswork. To do so, navigate to **Administration > Crosswork Management**. The certificates under **Crosswork-ZTP-Device-SUDI** and **Crosswork-ZTP-Owner** are the ones which are required to be updated.
 
 ![Image 001]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img001.png)
 
+Select **Crosswork-ZTP-Device-SUDI** and select edit. Use the Browse button to upload the **Cisco M2 CA Certificate** from your local filestore to Crosswork.
+
 ![Image 002]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img002.png)
+
+Next, select **Crosswork-ZTP-Owner certificate** and select edit. Use the Browse button to upload the **Pin Domain CA Certificate**, **Owner Certificate** and **Owner Key** to Crosswork. It is not mandatory to enter a **Owner Passphrase**.
 
 ![Image 003]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img003.png)
 
+## Upload ZTP Configuration Files
+
+The next step of the ZTP process involves uploading the device Day0 configuration files. These configuration files will be downloaded to the device during the ZTP process. Note that these configuration files may be device configuration files, or scripts which are executed on the devices as part of the ZTP process. Scripts can provide additional functionality which is not possible with a configuration files, such as posting the device status to Crosswork when it has been successfully onboarded.
+
 ![Image 004]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img004.png)
+
+Crosswork supports the use of variable substitution in the configuration files. The variables will be substituted at run-time when a request is made from the ZTP device.
 
 ![Image 005]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img005.png)
 
+Upload the desired Software images for use by ZTP. 
+
 ![Image 006]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img006.png)
 
+We will need to upload the Serial Number and Voucher to the ZTP server. This selecion allows us to specify the device serial number, and associate it with a ownership voucher which provides a tamper proof evidence of device ownership for the secure ZTP process. 
+
 ![Image 007]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img007.png)
+
+The last part involves the configuration of a **Zero Touch Profile**. 
 
 ![Image 008]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img008.png)
 
