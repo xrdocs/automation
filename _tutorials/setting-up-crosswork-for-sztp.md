@@ -45,7 +45,7 @@ First, ensure that the ZTP application is installed and fully functional. You ma
 
 ![Image 000]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img000.png)
 
-## Upload ZTP certificates
+### Upload ZTP certificates
 
 The next step involves uploading the ZTP certificates onto Crosswork. To do so, navigate to **Administration > Crosswork Management**. The certificates under **Crosswork-ZTP-Device-SUDI** and **Crosswork-ZTP-Owner** are the ones which are required to be updated.
 
@@ -59,7 +59,7 @@ Next, select **Crosswork-ZTP-Owner certificate** and select edit. Use the Browse
 
 ![Image 003]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img003.png)
 
-## Upload device configuration files
+### Upload device configuration files
 
 The next step of the ZTP process involves uploading the device Day0 configuration files. These configuration files will be downloaded to the device during the ZTP process. Note that these configuration files may be device configuration files, or scripts which are executed on the devices as part of the ZTP process. Scripts can provide additional functionality which is not possible with a configuration files, such as posting the device status to Crosswork when it has been successfully onboarded.
 
@@ -69,19 +69,19 @@ Crosswork supports the use of variable substitution in the configuration files. 
 
 ![Image 005]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img005.png)
 
-## Upload device software images
+### Upload device software images
 
 Upload the desired Software images for use by ZTP. 
 
 ![Image 006]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img006.png)
 
-## Add device Serial Number and Ownership Voucher
+### Add device Serial Number and Ownership Voucher
 
 We will need to upload the Serial Number and Voucher to the ZTP server. This selecion allows us to specify the device serial number, and associate it with a ownership voucher which provides a tamper proof evidence of device ownership for the secure ZTP process. 
 
 ![Image 007]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img007.png)
 
-## Create Zero Touch Profile 
+### Create Zero Touch Profile 
 
 The last part involves the configuration of a **Zero Touch Profile**. 
 
@@ -90,6 +90,33 @@ The last part involves the configuration of a **Zero Touch Profile**.
 ![Image 009]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img009.png)
 
 ![Image 010]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img010.png)
+
+## Add device entry on DHCP server
+
+
+```
+authoritative;
+option sztp-redirect code 143 = text;
+
+default-lease-time 7200;
+max-lease-time 7200;
+
+subnet 105.1.1.0 netmask 255.255.255.0 {
+  option routers 105.1.1.254;
+  option domain-name "cisco.com";
+  option domain-name-servers 171.70.168.183;
+  option subnet-mask 255.255.255.0;
+  range 105.1.1.40 105.1.1.140;
+  if exists user-class and option user-class = "iPXE" {
+         filename = "http://105.1.2.100:30604/crosswork/imagesvc/v1/device/files/CW-IMG-UUID";
+      } else {
+option sztp-redirect "https://105.1.2.100:30617/restconf/operations/ietf-sztp-bootstrap-server:get-bootstrap-data";
+  }
+
+}
+```
+
+
 
 
 
