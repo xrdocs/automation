@@ -59,7 +59,7 @@ Next, select **Crosswork-ZTP-Owner certificate** and select edit. Use the Browse
 
 ![Image 003]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img003.png)
 
-## Upload ZTP Configuration Files
+## Upload device configuration files
 
 The next step of the ZTP process involves uploading the device Day0 configuration files. These configuration files will be downloaded to the device during the ZTP process. Note that these configuration files may be device configuration files, or scripts which are executed on the devices as part of the ZTP process. Scripts can provide additional functionality which is not possible with a configuration files, such as posting the device status to Crosswork when it has been successfully onboarded.
 
@@ -69,13 +69,19 @@ Crosswork supports the use of variable substitution in the configuration files. 
 
 ![Image 005]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img005.png)
 
+## Upload device software images
+
 Upload the desired Software images for use by ZTP. 
 
 ![Image 006]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img006.png)
 
+## Add device Serial Number and Ownership Voucher
+
 We will need to upload the Serial Number and Voucher to the ZTP server. This selecion allows us to specify the device serial number, and associate it with a ownership voucher which provides a tamper proof evidence of device ownership for the secure ZTP process. 
 
 ![Image 007]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img007.png)
+
+## Create Zero Touch Profile 
 
 The last part involves the configuration of a **Zero Touch Profile**. 
 
