@@ -36,7 +36,7 @@ This tutorial demonstrates how the real-time network model in Crosswork Optimiza
 
 The screenshot below shows a network managed by the Crosswork Optimization Engine. 
 
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/screenshot 2021-08-23 14.31.07.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-cisco-wae-to-run-sim-on-network-models-from-OE-img000.png)
 
 The network model comprise of devices (nodes, links) as well as Segment Routing Traffic Engineering (SR-TE) policies and additional attributes collected from the physical network. Crosswork Optimization Engine provides the user with a real-time view of the topology and traffic on its web based user interface.
 
@@ -44,7 +44,7 @@ The network model comprise of devices (nodes, links) as well as Segment Routing 
 
 In order to retrieve the network model from Optimization Engine, we leverage the Crosswork RESTCONF APIs exposed by the Optimization Engine. The details of these RESTCONF APIs are documented on DevNet under [Optimization Engine Operations](https://developer.cisco.com/docs/crosswork/#!crosswork-optimization-engine-apis-2-0-release-apis-optimization-engine-operations).
 
-![Plan file export using Crosswork RESTCONF API]({{site.baseurl}}/images/screenshot 2021-08-23 15.23.54.png)
+![Plan file export using Crosswork RESTCONF API]({{site.baseurl}}/images/using-cisco-wae-to-run-sim-on-network-models-from-OE-img001.png)
 
 
 The get-plan Optimization Engine operations RESTCONF request allows the user to specify the schema version for network model (plan file) export, and the format to use (.txt or .pln). To find out what schema version your WAE Design client supports, select About WAE Design on the menu bar. Regardless of the parameters specified, the plan file is returned as a base64 encoded field in JSON body. The user may use utilities such as base64 (certutil in Windows) to decode the encoded plan file.
@@ -87,9 +87,9 @@ The output of the curl command needs to be saved to file, parsed and decoded.
 
 Once the plan file is decoded, WAE Design Client can be used to open the file. Simulations can be performed as though the network model was retrieved from a WAE collector Server.
 
-![Opening Network Model using WAE Design Client]({{site.baseurl}}/images/screenshot 2021-08-23 14.42.45_2.png)
+![Opening Network Model using WAE Design Client]({{site.baseurl}}/images/using-cisco-wae-to-run-sim-on-network-models-from-OE-img002.png)
 
 
 For example, the following shows the worst case traffic view as a result of a simulation analysis being performed on the network model. More simulation capabilities such as those described in [WAE Design Quick Start Guide](https://developer.cisco.com/docs/wan-automation-engine/#!wae-design-quick-start-guide) may be performed.
 
-![WAE Design WC traffic view]({{site.baseurl}}/images/screenshot 2021-08-23 15.39.17.png)
+![WAE Design WC traffic view]({{site.baseurl}}/images/using-cisco-wae-to-run-sim-on-network-models-from-OE-img003.png)
