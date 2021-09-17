@@ -55,7 +55,45 @@ Select **Crosswork-ZTP-Device-SUDI** and select edit. Use the Browse button to u
 
 ![Image 002]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img002.png)
 
-Next, select **Crosswork-ZTP-Owner certificate** and select edit. Use the Browse button to upload the **Pin Domain CA Certificate**, **Owner Certificate** and **Owner Key** to Crosswork. It is not mandatory to enter a **Owner Passphrase**.
+Next, select **Crosswork-ZTP-Owner certificate** and select edit. Use the Browse button to upload the **Pinned-Domain CA Certificate (PDC)**, **Owner Certificate** and **Owner Key** to Crosswork. It is not mandatory to enter a **Owner Passphrase**.
+
+Note: The following shows how we may generate a **Pinned-Domain Certificate (PDC)** and **Owner Certificate** on Crosswork:
+
+```
+# Create Root Key
+openssl genrsa -aes256 -out pdc.key 2048
+# Create and self sign the Root Certificate
+openssl req -config pdc.cnf -key root.key -new -x509 -days 7300 -sha256 -extensions v3_ca -out pdc.crt
+
+[ req_distinguished_name ]
+# See <https://en.wikipedia.org/wiki/Certificate_signing_request>.
+countryName                     = US
+stateOrProvinceName             = CA
+localityName                    = SJ
+0.organizationName              = Customer
+organizationalUnitName          = Network
+commonName                      = Network.Customer.PDC.ROOT
+ 
+[ v3_ca ]
+# Extensions for a typical CA (`man x509v3_config`).
+subjectKeyIdentifier = hash
+authorityKeyIdentifier = keyid:always,issuer
+basicConstraints = critical, CA:true
+keyUsage = critical, digitalSignature, cRLSign, keyCertSign
+ 
+# owner keys and certs
+openssl genrsa -out owner.key 2048
+openssl req -key owner.key -new -sha256 -out owner.csr
+openssl x509 -req -in owner.csr -CA pdc.crt -CAkey pdc.key -CAcreateserial -out owner.crt -days 1825
+
+```
+
+Once the PDC is generated, we may pass along the PDC (in DER format) and device serial number to Cisco or the MASA Server in order to generate the **Ownership Voucher** for each device which will be used at a later stage. The following command may be used to convert the PDC from PEM to DER format.
+
+```
+openssl x509 -in pdc.pem -inform pem -outform DER -out pdc.der
+```
+
 
 ![Image 003]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img003.png)
 
@@ -77,7 +115,7 @@ Upload the desired Software images for use by ZTP.
 
 ### Add device Serial Number and Ownership Voucher
 
-We will need to upload the Serial Number and Voucher to the ZTP server. This selecion allows us to specify the device serial number, and associate it with a ownership voucher which provides a tamper proof evidence of device ownership for the secure ZTP process. 
+We will need to upload the Serial Number and Ownership Voucher (obtained from Cisco or MASA server) to the ZTP server. This selecion allows us to specify the device serial number, and associate it with a ownership voucher which provides a tamper proof evidence of device ownership for the secure ZTP process. 
 
 ![Image 007]({{site.baseurl}}/images/setting-up-crosswork-for-sztp-img007.png)
 
@@ -93,6 +131,7 @@ The last part involves the configuration of a **Zero Touch Profile**.
 
 ## Add device entry on DHCP server
 
+The following example provides the DHCP server configuration for use in the ZTP/SZTP process:
 
 ```
 authoritative;
@@ -115,6 +154,9 @@ option sztp-redirect "https://105.1.2.100:30617/restconf/operations/ietf-sztp-bo
 
 }
 ```
+
+We are now ready to process with the Secure ZTP process on the device. 
+
 
 
 
