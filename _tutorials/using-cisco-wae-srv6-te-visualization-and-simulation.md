@@ -36,7 +36,11 @@ Lastly, Crosswork Optimization Engine allows for the discovery and visualization
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img003.png)
 
 
-## Using WAE Design to open OE model
+## Using WAE Design to open Optimization Engine model
+
+After we have successfully retrieve the Optimization Engine (OE) model from Crosswork Optimization Engine, we may use WAE Design Client to open the plan file. There are three additional tabs available - **SRv6 Node SIDs, SRv6 Interface SIDs, and Flex Algorithms.**
+
+
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img004.png)
 
