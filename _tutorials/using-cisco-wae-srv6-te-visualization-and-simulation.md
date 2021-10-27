@@ -30,14 +30,11 @@ Lastly, Crosswork Optimization Engine allows for the discovery and visualization
 
 ## Using WAE Design to open OE model
 
-![WAE Design Client]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img004.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img004.png)
 
-![WAE Design Client]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img005.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img005.png)
 
-![WAE Design Client]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img006.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img006.png)
 
-![WAE Design Client]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img007.png)
-
-
-
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img007.png)
 
