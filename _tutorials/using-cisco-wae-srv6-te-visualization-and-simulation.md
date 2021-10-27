@@ -17,13 +17,27 @@ On the Crosswork Optimization Engine, a network with SRv6 and FlexAlgo is render
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img001.png)
 
-If a node with SRv6 is selected,  details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in will be rendered on the user interface.
+If a node is selected with the SRv6 tab, details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in will be rendered on the user interface. 
+
+Note: Maximum SID Depth (MSD) discovery information will only be reflected under **SR-MPLS > Prefixes** Tab.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img002.png)
 
 Lastly, Crosswork Optimization Engine allows for the discovery and visualization of PCC-init SRv6 TE policies on the network, including rendering of details on candidate path. 
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img003.png)
+
+
+## Using WAE Design to open OE model
+
+![WAE Design Client]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img004.png)
+
+![WAE Design Client]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img005.png)
+
+![WAE Design Client]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img006.png)
+
+![WAE Design Client]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img007.png)
+
 
 
 
