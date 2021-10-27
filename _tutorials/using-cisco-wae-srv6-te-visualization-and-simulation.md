@@ -1,7 +1,15 @@
 ---
-published: false
+published: true
 date: '2021-10-27 10:17 +0800'
 title: Using Cisco WAE for SRv6 and SRv6 TE visualization and simulation
+author: Fung Lim
+tags:
+  - Crosswork
+  - Crosswork Optimization Engine
+  - WAE Design
+  - WAN Automation Engine
+  - SRv6
+  - FlexAlgo
 ---
 ## Introduction
 
@@ -17,7 +25,9 @@ On the Crosswork Optimization Engine, a network with SRv6 and FlexAlgo is render
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img001.png)
 
-If a node with SRv6 is selected,  details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in will be rendered on the user interface.
+If a node is selected with the SRv6 tab, details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in will be rendered on the user interface. 
+
+Note: Maximum SID Depth (MSD) discovery information will only be reflected under **SR-MPLS > Prefixes** Tab.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img002.png)
 
@@ -26,4 +36,13 @@ Lastly, Crosswork Optimization Engine allows for the discovery and visualization
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img003.png)
 
 
+## Using WAE Design to open OE model
+
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img004.png)
+
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img005.png)
+
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img006.png)
+
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img007.png)
 
