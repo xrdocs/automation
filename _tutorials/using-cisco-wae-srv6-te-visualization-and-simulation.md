@@ -2,6 +2,14 @@
 published: true
 date: '2021-10-27 10:17 +0800'
 title: Using Cisco WAE for SRv6 and SRv6 TE visualization and simulation
+author: Fung Lim
+tags:
+  - Crosswork
+  - Crosswork Optimization Engine
+  - WAE Design
+  - WAN Automation Engine
+  - SRv6
+  - FlexAlgo
 ---
 ## Introduction
 
