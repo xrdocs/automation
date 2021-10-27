@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 date: '2021-10-27 10:17 +0800'
 title: Using Cisco WAE for SRv6 and SRv6 TE visualization and simulation
 ---
