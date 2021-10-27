@@ -46,7 +46,9 @@ Note: These additional tables may not be displayed by default, and the user need
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img004.png)
 
-The SRv6 Interface SIDs table shows the same information but from the perspective of interfaces on the network.
+The SRv6 Interface SIDs table shows the same information but from the perspective of interfaces on the network. 
+
+Note: The Interfaces table has also been augmented with additional fields including FlexAlgo affinities.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img005.png)
 
