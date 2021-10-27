@@ -13,11 +13,13 @@ tags:
 ---
 ## Introduction
 
-Cisco WAN Automation Engine release 7.5 introduces capabilities for modeling SRv6 and FlexAlgo. However, this initial phase relies on Crosswork Optimization Engine 3.0 for network collection and model building. In the tutorial [Using Cisco WAE to run simulation on network models](https://xrdocs.io/automation/tutorials/using-cisco-wae-to-run-sim-on-network-models-from-OE/) from Crosswork Optimization Engine, we provided an example on the steps required to retrieve the network model built using the Crosswork Optimization Engine.
+Cisco WAN Automation Engine release 7.5 introduces capabilities for modeling SRv6 and FlexAlgo. This provides offline planning capabilities for customers looking at modeling and performing simulation analysis on their SRv6 and FlexAlgo capable networks.
+
+However, this initial phase relies on Crosswork Optimization Engine 3.0 for network collection and model building. In the tutorial [Using Cisco WAE to run simulation on network models](https://xrdocs.io/automation/tutorials/using-cisco-wae-to-run-sim-on-network-models-from-OE/) from Crosswork Optimization Engine, we provided an example on the steps required to retrieve the network model built using the Crosswork Optimization Engine.
 
 Using the same steps, we should be able to retrieve a plan file (network model) comprising of SRv6 and FlexAlgo attributes from the network.
 
-This tutorial provides an example of how such a model might render in the WAE Design client and how its representation compare with that on the Crosswork Optimization Engine.
+This tutorial provides an example of how such a model might render in the WAE Design client and how its representation compare with that on the Crosswork Optimization Engine. 
 
 ## Crosswork Optimization Engine model
 
@@ -59,6 +61,3 @@ The Flex Algorithm Table provides a list of known Algorithms which have been col
 Under the LSP table, both SR-TE and SRv6 TE Policies will be displayed. One can select a SRv6 TE Policy to render the IGP path taken by that SRv6 TE Policy.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img007.png)
-
-
-
