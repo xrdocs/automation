@@ -13,11 +13,13 @@ tags:
 ---
 ## Introduction
 
-Cisco WAN Automation Engine release 7.5 introduces capabilities for modeling SRv6 and FlexAlgo. However, this initial phase relies on Crosswork Optimization Engine 3.0 for network collection and model building. In the tutorial [Using Cisco WAE to run simulation on network models](https://xrdocs.io/automation/tutorials/using-cisco-wae-to-run-sim-on-network-models-from-OE/) from Crosswork Optimization Engine, we provided an example on the steps required to retrieve the network model built using the Crosswork Optimization Engine.
+Cisco WAN Automation Engine release 7.5 introduces capabilities for modeling SRv6 and FlexAlgo. This provides offline planning capabilities for customers looking at modeling and performing simulation analysis on their SRv6 and FlexAlgo capable networks.
+
+However, this initial phase relies on Crosswork Optimization Engine 3.0 for network collection and model building. In the tutorial [Using Cisco WAE to run simulation on network models](https://xrdocs.io/automation/tutorials/using-cisco-wae-to-run-sim-on-network-models-from-OE/) from Crosswork Optimization Engine, we provided an example on the steps required to retrieve the network model built using the Crosswork Optimization Engine.
 
 Using the same steps, we should be able to retrieve a plan file (network model) comprising of SRv6 and FlexAlgo attributes from the network.
 
-This tutorial provides an example of how such a model might render in the WAE Design client and how its representation compare with that on the Crosswork Optimization Engine.
+This tutorial provides an example of how such a model might render in the WAE Design client and how its representation compare with that on the Crosswork Optimization Engine. 
 
 ## Crosswork Optimization Engine model
 
@@ -36,13 +38,26 @@ Lastly, Crosswork Optimization Engine allows for the discovery and visualization
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img003.png)
 
 
-## Using WAE Design to open OE model
+## Using WAE Design to open Optimization Engine model
+
+After we have successfully retrieve the Optimization Engine (OE) model from Crosswork Optimization Engine, we may use WAE Design Client to open the plan file. There are three additional tabs available - **SRv6 Node SIDs, SRv6 Interface SIDs, and Flex Algorithms.**
+
+As can be seen below, the Node, SRv6 Locator, SR Algorithm and Protected attribute will be reflected on the SRv6 Node SID table.
+
+Note: These additional tables may not be displayed by default, and the user needs to select these tables to be displayed explictly.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img004.png)
 
+The SRv6 Interface SIDs table shows the same information but from the perspective of interfaces on the network. 
+
+Note: The Interfaces table has also been augmented with additional fields including FlexAlgo affinities.
+
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img005.png)
+
+The Flex Algorithm Table provides a list of known Algorithms which have been collected via the SR-PCE, including additional attributes such as the Metric Type and affinity information (not shown).
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img006.png)
 
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img007.png)
+Under the LSP table, both SR-TE and SRv6 TE Policies will be displayed. One can select a SRv6 TE Policy to render the IGP path taken by that SRv6 TE Policy.
 
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img007.png)
