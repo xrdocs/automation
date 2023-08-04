@@ -169,6 +169,35 @@ ML_Users                  2021 Nov 17               50                   InCompl
 WAE Server: "198.18.134.30"
 ```
   
+Note: If Cisco WAE is using Cisco Smart Licensing (instead of traditional licensing), the license_check command will not return the license expiry date, but instead will return the expiration date for license authorization. This expiration date is usually 90 days from the previous authorization and the Smart Licensing agent will automatically send a renewal request 30 days prior to expiration. This expiration date does not correlate to the actual license expiry date.
+
+To check the license expiry date, see the license entitlement details under Cisco Smart Software Manager (CSSM) at Cisco Software Central.
+
+In addition, here are some additional details on the options available under WAE WebUI > Smart Licensing.
+
+a. Renew Authorization: Renews the authorization by sending renew message to the Cisco Licensing Cloud.
+Normally the authorization renewal is automatic and occurs every 30 days. If needed, this can be invoked to force a manual renewal.
+
+b. Renew Registration: Re-register the product instance (renews the ID certificate) by sending renew message to the Cisco Licensing Cloud.
+Normally the renew operation is automatic and occurs as specified in the previous register or renew response message. There may be times that application needs to trigger a renew operation.
+
+c. Reregister: The idtoken used for registration has a validity specified while generating the token in CSSM. Once the token expires, user will have to register using a new token using this option.
+
+d. Deregister: This option can be used by the user to deregister from Cisco CSSM. If licenses has been checked out, they will be returned to evaluation mode.
+
+e. Disable Smart Software Licensing: This is for disabling Smart Licensing altogether.
+
+Under normal circumstances, a, b & c should not be service impacting.
+
+When a particular license expires or auto-renew authorization does not happen, that license's status will change to either AuthorizedPeriodExpired or NotAuthorized. In this state, the product will only work once the licenses and authorization are renewed. There will also be notifications from Cisco Smart Software Manager (CSSM) on the virtual account when the license is about to expire or has expired. 
+
+
+In addition, license authorization is performed automatically every 30 days. If authorization is successful and then the system loses access to CSSM, it should be fine for at least 30 days or until the authorization expiry date is near.
+
+
+  
+  
+  
 ### Install WAE Design License
   
 Start WAE Design client, and select File > License > Install. Select **Use smart license**. Enable WAE Design for Smart Licensing by entering the WAE Server details and then selecting Ok.
