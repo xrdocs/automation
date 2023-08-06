@@ -1,11 +1,11 @@
 ---
-published: false
+published: true
 date: '2023-08-06 10:23 +0800'
 title: Using inter-as-nimo for merging plan files
 author: Fung Lim
 excerpt: Using inter-as-nimo to merge plan files
 ---
-## A New Post
+## Introduction
 
 Plan files from different Autonomous Systems (AS) can be merged using the inter-as-nimo. The inter-as-nimo resolves any conflicts across the plan files. Plan files in native format are supported.
 
@@ -13,7 +13,27 @@ In addition, inter-as-nimo may be used to merge plan files from the same AS. Use
 
 Note: WAE does not support the collection of multiple basic networks on the same server. If multiple basic networks need to be collected concurrently, they will require separate WAE server instances.
 
+During the merge operation, the following elements will be resolved:
 
+- AS
+- Circuits
+- Nodes
+- Interfaces
+- LSPs, LSP hops and Segement List Hops
+- Named Paths
+- External EndPoints
+- External EndPoint Members
+- Demands and Demand Traffic
+
+Note that Nodename is used for Node resolution and therefore has to be unique across the network. In addition, plan files having single AS as internal is supported. Plan files with multiple internal AS has not been validated.
+
+## Example
+
+In the following example, we have a topology which requires two methods of collection, topo-igp-nimo for the central region, and topo-bgpls-xtc-nimo for the east region.
+
+![Central Region]({{site.baseurl}}/images/using-inter-as-nimo-01.png)
+![East Region]({{site.baseurl}}/images/using-inter-as-nimo-02.png)
+![Merged Network]({{site.baseurl}}/images/using-inter-as-nimo-03.png)
 
 
 
