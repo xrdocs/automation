@@ -2,6 +2,8 @@
 published: false
 date: '2023-08-06 10:23 +0800'
 title: Using inter-as-nimo for merging plan files
+author: Fung Lim
+excerpt: Using inter-as-nimo to merge plan files
 ---
 ## A New Post
 
