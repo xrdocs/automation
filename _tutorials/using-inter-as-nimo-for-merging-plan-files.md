@@ -3,7 +3,7 @@ published: true
 date: '2023-08-06 10:23 +0800'
 title: Using inter-as-nimo for merging plan files
 author: Fung Lim
-excerpt: Using inter-as-nimo to merge plan files
+excerpt: 'This tutorial demonstrates the use of the inter-as-nimo to merge plan files '
 ---
 ## Introduction
 
