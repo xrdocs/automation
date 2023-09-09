@@ -19,18 +19,13 @@ These enhancements provide capabilities for customers looking at the collection,
 
 This tutorial shows how the WAE Design client renders SRv6 network models and compares its representation with the Crosswork Optimization Engine.
 
-
 ## Crosswork Optimization Engine model
 
-On the Crosswork Optimization Engine, a SRv6 based network is rendered as shown below. 
+On the Crosswork Optimization Engine, a SRv6 based network is rendered as follows. 
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img001.png)
 
-If a node is selected with the SRv6 tab, the user interface will render details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in.
-
-Note: Maximum SID Depth (MSD) discovery information will only be reflected under SR-MPLS > Prefixes Tab.
-
-If a node is selected with the SRv6 tab, details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in will be rendered on the user interface. 
+If a node is selected with the SRv6 chevron expanded, details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in will be rendered on the user interface. 
 
 Note: Maximum SID Depth (MSD) discovery information will only be reflected under **SR-MPLS > Prefixes** Tab.
 
