@@ -49,7 +49,7 @@ Note: The Interfaces table has also been augmented with additional fields includ
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img006.png)
 
-The LSP table will list SR and SRv6 policies present in the network. One may select a specific SRv6 policy to render the IGP path and filter to Segment Lists, Segment List Hops, which will display the SRv6 SID Hops.
+The LSPs table list SR and SRv6 policies present in the network. One may select a specific SRv6 policy to render the IGP path and filter to Segment Lists, Segment List Hops, which will display the SRv6 SID Hops.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img007.png)
 
