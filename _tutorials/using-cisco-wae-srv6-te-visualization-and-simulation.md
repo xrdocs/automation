@@ -54,7 +54,7 @@ The *LSPs* table list SR and SRv6 policies on the network. One may select a spec
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img007.png)
 
-SR LSP Optimizers are supported on SRv6 policies, in the same manner as SR policies. The following demonstrates using the SR LSP Optimizers to minimize the TE Path metric of a selected SRv6 policy.
+SR LSP Optimizers are supported on SRv6 policies, in the same manner as SR policies. The following demonstrates the use of SR LSP Optimizers to minimize the TE Path metric of a selected SRv6 policy.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img008.png)
 
