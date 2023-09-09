@@ -1,6 +1,6 @@
 ---
 published: true
-date: '2021-10-27 10:17 +0800'
+date: '2023-09-09 00:00 +0800'
 title: Using Cisco WAE for SRv6 and SRv6 TE visualization and simulation
 author: Fung Lim
 tags:
@@ -13,51 +13,51 @@ tags:
 ---
 ## Introduction
 
-Cisco WAN Automation Engine release 7.5 introduces capabilities for modeling SRv6 and FlexAlgo. This provides offline planning capabilities for customers looking at modeling and performing simulation analysis on their SRv6 and FlexAlgo capable networks.
+Cisco WAN automation engine 7.6 supports SRv6 visualization using SR-PCE based network collection using topo-bgpls-xtc-nimo and lsp-pcep-xtc-nimo.
 
-However, this initial phase relies on Crosswork Optimization Engine 3.0 for network collection and model building. In the tutorial [Using Cisco WAE to run simulation on network models](https://xrdocs.io/automation/tutorials/using-cisco-wae-to-run-sim-on-network-models-from-OE/) from Crosswork Optimization Engine, we provided an example on the steps required to retrieve the network model built using the Crosswork Optimization Engine.
+These enhancements provide capabilities for customers looking at the collection, visualization, and modeling of their SRv6-capable networks, including the ability to use SR LSP Optimizers. WAE Design has incorporated SRv6 modeling capabilities since 7.5 release and can be used to open network models comprising SRv6 attributes from the Crosswork Optimization Engine. 
 
-Using the same steps, we should be able to retrieve a plan file (network model) comprising of SRv6 and FlexAlgo attributes from the network.
+This tutorial shows how the WAE Design client renders SRv6 network models and compares its representation with the Crosswork Optimization Engine.
 
-This tutorial provides an example of how such a model might render in the WAE Design client and how its representation compare with that on the Crosswork Optimization Engine. 
 
 ## Crosswork Optimization Engine model
 
-On the Crosswork Optimization Engine, a network with SRv6 and FlexAlgo is rendered on the user interface as follows. As can be seen below, Crosswork Optimization Engine allows the visualization of up to two user selected FlexAlgos on the topology map, although there might be more FlexAlgos deployed on the network.
+On the Crosswork Optimization Engine, a SRv6 based network is rendered as shown below. 
 
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img001.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img001.png)
+
+If a node is selected with the SRv6 tab, the user interface will render details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in.
+
+Note: Maximum SID Depth (MSD) discovery information will only be reflected under SR-MPLS > Prefixes Tab.
 
 If a node is selected with the SRv6 tab, details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in will be rendered on the user interface. 
 
 Note: Maximum SID Depth (MSD) discovery information will only be reflected under **SR-MPLS > Prefixes** Tab.
 
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img002.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img002.png)
 
 Lastly, Crosswork Optimization Engine allows for the discovery and visualization of PCC-init SRv6 TE policies on the network, including rendering of details on candidate path. 
 
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img003.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img003.png)
 
+## Using WAE Design on SRv6 models 
 
-## Using WAE Design to open Optimization Engine model
+Two additional tables (SRv6 Node SIDs, SRv6 Interface SIDs) were introduced to support the modeling of SRv6. The SRv6 Node SIDs table provides visibility to the Node, SRv6 Locator, SR Algorithm, and Protected attribute, while the SRv6 Interface SIDs table provides Node, Interface, SID, and SR-Algorithm attributes. 
 
-After we have successfully retrieve the Optimization Engine (OE) model from Crosswork Optimization Engine, we may use WAE Design Client to open the plan file. There are three additional tabs available - **SRv6 Node SIDs, SRv6 Interface SIDs, and Flex Algorithms.**
+Note: WAE Design Client does not display these tables by default. 
 
-As can be seen below, the Node, SRv6 Locator, SR Algorithm and Protected attribute will be reflected on the SRv6 Node SID table.
-
-Note: These additional tables may not be displayed by default, and the user needs to select these tables to be displayed explictly.
-
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img004.png)
-
-The SRv6 Interface SIDs table shows the same information but from the perspective of interfaces on the network. 
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img004.png)
 
 Note: The Interfaces table has also been augmented with additional fields including FlexAlgo affinities.
 
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img005.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img005.png)
 
-The Flex Algorithm Table provides a list of known Algorithms which have been collected via the SR-PCE, including additional attributes such as the Metric Type and affinity information (not shown).
+The LSP table will list SR and SRv6 policies present in the network. One may select a specific SRv6 policy to render the IGP path and filter to Segment Lists, Segment List Hops, which will display the SRv6 SID Hops.
 
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img006.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img006.png)
 
-Under the LSP table, both SR-TE and SRv6 TE Policies will be displayed. One can select a SRv6 TE Policy to render the IGP path taken by that SRv6 TE Policy.
+SR LSP Optimizers are supported on SRv6 policies, in the same manner as SR policies. The following shows running the SR LSP Optimizers to minimize the TE Path metric.
 
-![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-flexalgo-img007.png)
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img007.png)
+
+
