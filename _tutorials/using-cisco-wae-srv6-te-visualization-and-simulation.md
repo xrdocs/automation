@@ -3,6 +3,7 @@ published: true
 date: '2023-09-09 00:00 +0800'
 title: Using Cisco WAE for SRv6 and SRv6 TE visualization and simulation
 author: Fung Lim
+excerpt: 'This tutorial introduces SRv6 and SRv6 TE capabilities on WAE 7.6'
 tags:
   - Crosswork
   - Crosswork Optimization Engine
