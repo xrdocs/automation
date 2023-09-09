@@ -31,7 +31,7 @@ Note: Maximum SID Depth (MSD) discovery information will only be reflected under
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img002.png)
 
-Lastly, Crosswork Optimization Engine allows for the discovery and visualization of PCC-init SRv6 TE policies on the network, including rendering of details on candidate path. 
+Lastly, Crosswork Optimization Engine allows for the discovery and visualization of PCC-init SRv6 policies on the network, including rendering of IGP path. 
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img003.png)
 
