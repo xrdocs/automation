@@ -21,11 +21,11 @@ This tutorial shows how the WAE Design client renders SRv6 network models and co
 
 ## Crosswork Optimization Engine model
 
-On the Crosswork Optimization Engine, a SRv6 based network is rendered as follows. 
+On the Crosswork Optimization Engine, a SRv6 based network is rendered on the Topology view as follows. 
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img001.png)
 
-If a node is selected with the SRv6 chevron expanded, details such as SRv6 Locators, relevant SIDs, and the Algorithms they participate in will be rendered on the user interface. 
+If a node is selected with the SRv6 chevron expanded, details such as *IPv6 Router ID*, *SR FlexAlgo*, *Locator prefix* and *SIDs* will be rendered on the user interface.
 
 Note: Maximum SID Depth (MSD) discovery information will only be reflected under **SR-MPLS > Prefixes** Tab.
 
@@ -37,19 +37,19 @@ Lastly, Crosswork Optimization Engine allows for the discovery and visualization
 
 ## Using WAE Design on SRv6 models 
 
-Two additional tables (SRv6 Node SIDs, SRv6 Interface SIDs) were introduced to support the modeling of SRv6. The SRv6 Node SIDs table provides visibility to the Node, SRv6 Locator, SR Algorithm, and Protected attribute, while the SRv6 Interface SIDs table provides Node, Interface, SID, and SR-Algorithm attributes. 
+Two additional tables (*SRv6 Node SIDs*, *SRv6 Interface SIDs*) were introduced to support the modeling of SRv6. The *SRv6 Node SIDs* table provides visibility to the Node, SRv6 Locator, SR Algorithm, and Protected attribute, while the *SRv6 Interface SIDs* table provides Node, Interface, SID, and SR FlexAlgo attributes. 
 
-Note: WAE Design Client does not display these tables by default. 
+Note: WAE Design does not display these tables by default. 
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img004.png)
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img005.png)
 
-Note: The Interfaces table has also been augmented with additional fields including SR FlexAlgo.
+Note: The *interfaces* table has been augmented with additional fields including SR FlexAlgo.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img006.png)
 
-The LSPs table list SR and SRv6 policies present in the network. One may select a specific SRv6 policy to render the IGP path and filter to Segment Lists, Segment List Hops, which will display the SRv6 SID Hops.
+The *LSPs* table list SR and SRv6 policies on the network. One may select a specific SRv6 policy to render the IGP path and filter to Segment Lists, Segment List Hops, which will display the SRv6 SID Hops.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img007.png)
 
