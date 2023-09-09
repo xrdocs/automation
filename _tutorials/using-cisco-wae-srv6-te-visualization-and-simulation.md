@@ -43,16 +43,19 @@ Note: WAE Design Client does not display these tables by default.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img004.png)
 
-Note: The Interfaces table has also been augmented with additional fields including FlexAlgo affinities.
-
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img005.png)
 
-The LSP table will list SR and SRv6 policies present in the network. One may select a specific SRv6 policy to render the IGP path and filter to Segment Lists, Segment List Hops, which will display the SRv6 SID Hops.
+Note: The Interfaces table has also been augmented with additional fields including FlexAlgo affinities.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img006.png)
 
-SR LSP Optimizers are supported on SRv6 policies, in the same manner as SR policies. The following shows running the SR LSP Optimizers to minimize the TE Path metric.
+The LSP table will list SR and SRv6 policies present in the network. One may select a specific SRv6 policy to render the IGP path and filter to Segment Lists, Segment List Hops, which will display the SRv6 SID Hops.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img007.png)
 
+SR LSP Optimizers are supported on SRv6 policies, in the same manner as SR policies. The following shows running the SR LSP Optimizers to minimize the TE Path metric.
+
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img008.png)
+
+![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img009.png)
 
