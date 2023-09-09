@@ -45,7 +45,7 @@ Note: WAE Design Client does not display these tables by default.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img005.png)
 
-Note: The Interfaces table has also been augmented with additional fields including FlexAlgo affinities.
+Note: The Interfaces table has also been augmented with additional fields including SR FlexAlgo.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img006.png)
 
