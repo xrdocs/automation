@@ -46,7 +46,7 @@ Note: WAE Design does not display these tables by default.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img005.png)
 
-Note: The *interfaces* table has been augmented with additional fields including SR FlexAlgo.
+Note: The *interfaces* table has been augmented with additional fields including SR FlexAlgo. WAE Design has capabilities to perform path simulation and rendering based on FlexAlgo definitions such as metric type and FlexAlgo affinities.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img006.png)
 
