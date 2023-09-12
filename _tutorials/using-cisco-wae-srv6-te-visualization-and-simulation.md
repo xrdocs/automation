@@ -14,7 +14,7 @@ tags:
 ---
 ## Introduction
 
-Cisco WAN automation engine 7.6 supports SRv6 visualization using SR-PCE based network collection using topo-bgpls-xtc-nimo and lsp-pcep-xtc-nimo.
+Cisco WAN automation engine 7.6 supports SRv6 visualization using SR-PCE based network collection using *topo-bgpls-xtc-nimo* and *lsp-pcep-xtc-nimo*.
 
 These enhancements provide capabilities for customers looking at the collection, visualization, and modeling of their SRv6-capable networks, including the ability to use SR LSP Optimizers. WAE Design has incorporated SRv6 modeling capabilities since 7.5 release and can be used to open network models comprising SRv6 attributes from the Crosswork Optimization Engine. 
 
@@ -38,7 +38,7 @@ Lastly, Crosswork Optimization Engine allows for the discovery and visualization
 
 ## Using WAE Design on SRv6 models 
 
-Two additional tables (*SRv6 Node SIDs*, *SRv6 Interface SIDs*) were introduced to support the modeling of SRv6. The *SRv6 Node SIDs* table provides visibility to the Node, SRv6 Locator, SR Algorithm, and Protected attribute, while the *SRv6 Interface SIDs* table provides Node, Interface, SID, and SR FlexAlgo attributes. 
+Two additional tables (*SRv6 Node SIDs*, *SRv6 Interface SIDs*) were introduced to support the modeling of SRv6 networks. The *SRv6 Node SIDs* table provides visibility to the *Node*, *SRv6 Locator*, *SR Algorithm*, and *Protected* attribute, while the *SRv6 Interface SIDs* table provides *Node*, *Interface*, *SID*, and *SR FlexAlgo* attributes. 
 
 Note: WAE Design does not display these tables by default. 
 
@@ -46,15 +46,17 @@ Note: WAE Design does not display these tables by default.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img005.png)
 
-Note: The *interfaces* table has been augmented with additional fields including SR FlexAlgo. WAE Design has capabilities to perform path simulation and rendering based on FlexAlgo definitions such as metric type and FlexAlgo affinities.
+Note: The *interfaces* table has been augmented with additional fields including SR FlexAlgo. WAE Design has capabilities to perform path simulation and rendering based on FlexAlgo definitions such as *metric type* and *FlexAlgo affinities*.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img006.png)
 
-The *LSPs* table list SR and SRv6 policies on the network. One may select a specific SRv6 policy to render the IGP path and filter to Segment Lists, Segment List Hops, which will display the SRv6 SID Hops.
+The *LSPs* table list SR and SRv6 policies on the network. One may select a specific SRv6 policy to render the IGP path and filter to *Segment Lists*, *Segment List Hops*, which will display the *SRv6 SID Hops*.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img007.png)
 
-SR LSP Optimizers are supported on SRv6 policies, in the same manner as SR policies. The following demonstrates the use of SR LSP Optimizers to minimize the TE Path metric of a selected SRv6 policy.
+SR LSP Optimizers are supported on SRv6 policies, in the same manner as SR policies. If the network contains a topology-independent loop-free alternate (TI-LFA) configuration, WAE also supports the simulation of SRv6 policies before and after convergence, in line with its support for SR policies.
+
+The following demonstrates the use of SR LSP Optimizers to minimize the TE Path metric of a selected SRv6 policy.
 
 ![Crosswork Optimization Engine UI]({{site.baseurl}}/images/using-wae-srv6-img008.png)
 
