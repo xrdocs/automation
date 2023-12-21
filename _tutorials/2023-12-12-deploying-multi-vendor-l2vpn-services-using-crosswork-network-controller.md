@@ -61,7 +61,9 @@ set protocols mpls interface ge-0/0/0
 We configured our virtual environment to ignore the MTU setting so the l2circuit (Juniper)/ xconnect(Cisco) could come up (notice the L2circuit is **UP** on both ends):
 
 Juniper ouput:
-```
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 lab@PE1> show l2circuit connections 
 Layer-2 Circuit Connections:
 
@@ -84,15 +86,19 @@ Up -- operational
 Dn -- down                   
 Neighbor: 198.19.1.99 
     Interface                 Type  St     Time last up          # Up trans
-    ge-0/0/0.101(vc 101)      rmt   Up     Jul 13 11:41:51 2023           1
+    ge-0/0/0.101(vc 101)      rmt   <b>Up</b>     Jul 13 11:41:51 2023           1
       Remote PE: 198.19.1.99, Negotiated control-word: Yes (Null)
       Incoming label: 299840, Outgoing label: 299840
       Negotiated PW status TLV: No
-      Local interface: ge-0/0/0.101, Status: Up, Encapsulation: VLAN
+      Local interface: ge-0/0/0.101, Status: <b>Up</b>, Encapsulation: VLAN
       Flow Label Transmit: No, Flow Label Receive: No
-```
+</code>
+</pre>
+</div>
 Cisco output:
-```
+<div class="highlighter-rouge">
+<pre class="highlight">
+<code>
 Node-4# show l2vpn xconnect
 
 Legend: ST = State, UP = Up, DN = Down, AD = Admin Down, UR = Unresolved,
@@ -102,12 +108,16 @@ Legend: ST = State, UP = Up, DN = Down, AD = Admin Down, UR = Unresolved,
 XConnect                   Segment 1                       Segment 2                
 Group      Name       ST   Description            ST       Description            ST    
 ------------------------   -----------------------------   -----------------------------
-TEST       TEST       UP   Gi0/0/0/1.512          UP       198.19.1.99     101    UP    
-```
+TEST       TEST       <b>UP</b>   Gi0/0/0/1.512          <b>UP</b>       198.19.1.99     101    <b>UP</b>    
+</code>
+</pre>
+</div>
+
 2)	With the multi-vendor configuration working, our next goal was to provide a functional setup (along with the visualization) through Cisco Network Controller only. This involves using NSO (Network Services Orchestrator) to deliver these network changes. Let us adapt the NSO files accordingly. We “git-cloned” the repository (tsdn-juniper) that Cisco Automation engineers had posted on github into our NSO VM.
 https://github.com/maddn/tsdn-juniper.git
-3)	We extended the l2vpn service package in that repository to make our example  configuration work. We copied the "flat-l2vpn-juniper" folder into the package folder in our NSO environment. We followed the Installation section of that repository to install the "flat-l2vpn-juniper" package.
-4)	Using the Juniper config syntax stated in the above example, we used NSO cli to config the commands and use commit dry-run outformat xml to get the configuration template and replace the required parameters with input variable (seen in the XML section below, but did not apply the commit).
+
+3)	We extended the l2vpn service package in that repository to make our example  configuration work. We copied the "flat-l2vpn-juniper" folder into the package folder in our NSO environment. We followed the **Installation** section of that repository to install the "flat-l2vpn-juniper" package.
+4)	Using the Juniper config syntax stated in the above example, we used NSO cli to config the commands and use **commit dry-run outformat xml** to get the configuration template and replace the required parameters with input variable (seen in the XML section below, but did not apply the commit).
 ```
 cisco@nso-cnc5-brown-nss-j:~$ ncs_cli -u admin -C
 admin connected from 10.16.27.1 using ssh on nso-cnc5-brown-nss-j
@@ -181,7 +191,7 @@ admin@ncs(config)# end
 Uncommitted changes found, commit them? [yes/no/CANCEL] no
 admin@ncs#
 ```
-5)	We saved the config template inside ~/ncs-run/packages/flat-l2vpn-juniper/templates folder as cisco-flat-L2vpn-fp-junos-p2p-l2circuit-template.xml.
+5)	We saved the config template inside **~/ncs-run/packages/flat-l2vpn-juniper/templates** folder as **cisco-flat-L2vpn-fp-junos-p2p-l2circuit-template.xml**.
 This file has been added with this repository.
 ```
 cisco@nso-cnc5-brown-nss-j:~$ cd ncs-run/packages/flat-l2vpn-juniper/
@@ -193,7 +203,7 @@ cisco@nso-cnc5-brown-nss-j:~/ncs-run/packages/flat-l2vpn-juniper/templates$
 cisco@nso-cnc5-brown-nss-j:~/ncs-run/packages/flat-l2vpn-juniper/templates$ ls
 cisco-flat-L2vpn-fp-junos-p2p-l2circuit-template.xml  cisco-flat-L2vpn-fp-junos-template.xml
 ```
-6)	We went to the folder ~/ncs-run/packages/flat-l2vpn-juniper/python/flat_l2vpn_juniper and edited the Junos.py to add the p2p section inside the def conf_l2vpn(self, site, local): function.
+6)	We went to the folder **~/ncs-run/packages/flat-l2vpn-juniper/python/flat_l2vpn_juniper** and edited the **Junos.py** to add the p2p section inside the **def conf_l2vpn(self, site, local):** function.
 ```
 class Junos:
     def conf_l2vpn(self, site, local):
@@ -215,10 +225,10 @@ class Junos:
 ```
 This file has been added in our repository.
 
-7)	To make this configuration work, we had to modify the template for NSO Core Function Package for L2vpn (cisco-flat-L2vpn-fp-internal).
+7)	To make this configuration work, we had to modify the template for NSO Core Function Package for L2vpn (**cisco-flat-L2vpn-fp-internal**).
 
-     -  Went to the folder ~/ncs-run/packages/cisco-flat-L2vpn-fp-internal/templates.
-     -  Edited both cisco-flat-L2vpn-fp-cli-evpn-vpws-template.xml and cisco-flat-L2vpn-fp-cli-p2p-template.xml with the content below:
+     -  Went to the folder **~/ncs-run/packages/cisco-flat-L2vpn-fp-internal/templates**.
+     -  Edited both **cisco-flat-L2vpn-fp-cli-evpn-vpws-template.xml** and **cisco-flat-L2vpn-fp-cli-p2p-template.xml** with the content below:
 ```
 <l2vpn xmlns="http://tail-f.com/ned/cisco-ios-xr">
       <ignore-mtu-mismatch/>
@@ -236,7 +246,7 @@ This file has been added in our repository.
       ......< skipping some sections>.....
     </l2vpn>
 ```
-8)	Reloaded the packages in NSO (packages reload).
+8)	Reloaded the packages in NSO (**packages reload**).
 ```
 cisco@nso-cnc5-brown-nss-j:~/ncs-run$ ncs_cli -u admin -C
 admin connected from 10.16.27.1 using ssh on nso-cnc5-brown-nss-j
