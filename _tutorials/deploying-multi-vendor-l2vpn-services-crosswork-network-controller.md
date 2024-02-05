@@ -302,7 +302,7 @@ reload-result {
 …..............< skipping some output >..................
 ```
 
-Now we were ready to deploy and visualize this in Cisco Crosswork Network Controller.  (We documented these steps in the [Github Repo](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/blob/main/README.md)
+Now we were ready to deploy and visualize this in Cisco Crosswork Network Controller.  (We documented these steps in the [Github Repo](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/blob/main/README.md))
 
 1. Select L2VPN under Services Section.
          
