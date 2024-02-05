@@ -26,7 +26,7 @@ In the realm of multi-vendor support, exercising caution is essential—an imper
 In this particular scenario, the task was to establish and visualize a L2VPN point-to-point configuration between Cisco's IOS XR and Juniper's Junos using the Crosswork Network Controller GUI. Our objective is to lead you through the steps we took in this process, pushing the boundaries of what is presently recognized as officially supported (we hope to inspire others to explore the realm of possibilities with just a little added effort). For our setup, we used a network with Cisco IOS XRv9000 virtual routers and Juniper vMX virtual routers along with CNC, CDG, SR-PCE, NSO (with CNC core function packs).
 # A Step-by-Step Solution
 
-1. First, we built a working configuration between the two devices:
+We built a working configuration between the two devices:
 
 Cisco IOS XRv9000:
 ```
