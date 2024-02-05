@@ -8,6 +8,9 @@ tags:
   - Crosswork
   - Automation
   - Multi Vendor
+excerpt: >-
+  This article will cover how Cisco Crosswork Network Controller can be used to
+  deploy L2VPN services across a multi vendor network.
 ---
 # Authors
 Bradley Riapolov and Tahsin Chowdhury
