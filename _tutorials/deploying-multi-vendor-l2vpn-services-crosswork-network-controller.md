@@ -12,6 +12,8 @@ excerpt: >-
   This article will cover how Cisco Crosswork Network Controller can be used to
   deploy L2VPN services across a multi vendor network.
 ---
+{% include toc icon="table" title="Deploying multi vendor L2VPN services using Crosswork Network Controller" %}
+
 # Authors
 Bradley Riapolov and Tahsin Chowdhury
 # Introduction
