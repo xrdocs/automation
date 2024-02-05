@@ -17,7 +17,8 @@ Bradley Riapolov and Tahsin Chowdhury
 # Introduction
 Service Provider networks inherently span vast and diverse landscapes. These networks often involve intricate blends of hardware and software solutions, often sourced from various vendors. While these ecosystems offer advantages, the task of aligning one vendor's tools to effectively manage changes on another vendor's hardware continues to present a formidable challenge.
 
-Cisco's Crosswork Controller serves as one of these network orchestration tools. It's essential to understand the range of supported use cases to fully appreciate its capabilities and limitations. (https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/crosswork-network-controller/5-0/Solution-Workflow-Guide/bk-crosswork-network-controller-5-0-solution-workflow-guide/m-solution-overview.html#Cisco_Generic_Topic.dita_e1b66704-bf56-4676-8c0b-f956b30bc05f)
+
+Cisco's Crosswork Controller serves as one of these network orchestration tools. It's essential to understand the range of supported use cases to fully appreciate its [capabilities and limitations](https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/crosswork-network-controller/5-0/Solution-Workflow-Guide/bk-crosswork-network-controller-5-0-solution-workflow-guide/m-solution-overview.html#Cisco_Generic_Topic.dita_e1b66704-bf56-4676-8c0b-f956b30bc05f).
 
 In the realm of multi-vendor support, exercising caution is essential—an imperative that applies to any tool claiming such capabilities. Anticipating a tool to accommodate the myriad variations and deployment configurations, all subjected to rigorous testing through release processes, is not a practical expectation. Nonetheless, this shouldn't deter exploration; rather, it's an invitation to embark on uncharted paths and discover if orchestrating and visualizing a multi-vendor setup is attainable.
 
