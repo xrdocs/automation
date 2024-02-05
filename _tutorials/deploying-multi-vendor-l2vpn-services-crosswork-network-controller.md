@@ -25,9 +25,10 @@ In the realm of multi-vendor support, exercising caution is essential—an imper
 # A Multi-Vendor Objective
 In this particular scenario, the task was to establish and visualize a L2VPN point-to-point configuration between Cisco's IOS XR and Juniper's Junos using the Crosswork Network Controller GUI. Our objective is to lead you through the steps we took in this process, pushing the boundaries of what is presently recognized as officially supported (we hope to inspire others to explore the realm of possibilities with just a little added effort). For our setup, we used a network with Cisco IOS XRv9000 virtual routers and Juniper vMX virtual routers along with CNC, CDG, SR-PCE, NSO (with CNC core function packs).
 # A Step-by-Step Solution
-1)	First, we built a working configuration between the two devices:
 
-Cisco xrv9K
+1. First, we built a working configuration between the two devices:
+
+Cisco IOS XRv9000:
 ```
 interface GigabitEthernet0/0/0/1.101 l2transport
  description T-SDN Interface
@@ -51,7 +52,7 @@ l2vpn
  !
 !
 ```
-Juniper vMX
+Juniper vMX:
 ```
 set interfaces ge-0/0/1 vlan-tagging
 set interfaces ge-0/0/1 encapsulation vlan-ccc
@@ -66,7 +67,9 @@ set protocols ldp interface lo0.0
 set protocols mpls label-switched-path lsp_to_pe2 to 198.19.1.4
 set protocols mpls interface ge-0/0/0
 ```
-We configured our virtual environment to ignore the MTU setting so the l2circuit (Juniper)/ xconnect(Cisco) could come up (notice the L2circuit is **UP** on both ends):
+**Note:** We configured our virtual environment to ignore the MTU setting so the l2circuit (Juniper)/ xconnect(Cisco) could come up (notice the L2circuit is **UP** on both ends). This is specific to this virtual environment. It's strongly advised to use similar MTU in production networks.
+{: .notice}
+
 
 Juniper ouput:
 <div class="highlighter-rouge">
