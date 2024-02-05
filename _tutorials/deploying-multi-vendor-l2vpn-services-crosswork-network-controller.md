@@ -97,7 +97,7 @@ Up -- operational
 Dn -- down                   
 Neighbor: 198.19.1.99 
     Interface                 Type  St     Time last up          # Up trans
-    ge-0/0/0.101(vc 101)      rmt   <b>Up</b>     Jul 13 11:41:51 2023           1
+    ge-0/0/0.101(vc 101)      rmt   <mark>Up</mark>     Jul 13 11:41:51 2023           1
       Remote PE: 198.19.1.99, Negotiated control-word: Yes (Null)
       Incoming label: 299840, Outgoing label: 299840
       Negotiated PW status TLV: No
@@ -119,7 +119,7 @@ Legend: ST = State, UP = Up, DN = Down, AD = Admin Down, UR = Unresolved,
 XConnect                   Segment 1                       Segment 2                
 Group      Name       ST   Description            ST       Description            ST    
 ------------------------   -----------------------------   -----------------------------
-TEST       TEST       <b>UP</b>   Gi0/0/0/1.512          <b>UP</b>       198.19.1.99     101    <b>UP</b>    
+TEST       TEST       <mark>UP</mark>   Gi0/0/0/1.512          <mark>UP</mark>       198.19.1.99     101    <mark>UP</mark>    
 </code>
 </pre>
 </div>
