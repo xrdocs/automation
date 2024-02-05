@@ -306,23 +306,23 @@ Now we were ready to deploy and visualize this in Cisco Crosswork Network Contro
 
 1. Select L2VPN under Services Section.
          
-         <img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/903e8860-ceb2-4363-91c2-3a8a85b48522">
+<img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/903e8860-ceb2-4363-91c2-3a8a85b48522">
 
  2. Either use GUI hitting "+" sign or import a configuration file in JSON format.
 
-         <img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/1b6a7025-0a8e-4266-81b5-d664741cac2c">
+<img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/1b6a7025-0a8e-4266-81b5-d664741cac2c">
 
 3. We will import a JSON configuration file for the service. The JSON file has been added in this repository.
 
-         <img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/e40b5c53-bc96-4084-b4f3-eb41ee99e320">
+<img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/e40b5c53-bc96-4084-b4f3-eb41ee99e320">
 
 4. Check the imported parameters and hit "commit changes" (optional, also can do a dry-run before commit).
 
-         <img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/1e9b1308-24a9-45eb-9645-ed306017de60">
+<img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/1e9b1308-24a9-45eb-9645-ed306017de60">
 
 5. And finaly - visualize the service in CNC (remember, we never touched the command line on the routers, everything was done via Crosswork Network Controller):
   
-         <img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/63d41e54-2636-4b1e-8b39-a93653e09ac0">
+<img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/63d41e54-2636-4b1e-8b39-a93653e09ac0">
 
 
 Let us now examine the CLI on the routers to verify the output.
