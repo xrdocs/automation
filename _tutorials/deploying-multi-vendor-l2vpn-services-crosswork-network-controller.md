@@ -124,11 +124,12 @@ TEST       TEST       <mark>UP</mark>   Gi0/0/0/1.512          <mark>UP</mark>  
 </pre>
 </div>
 
-2)	With the multi-vendor configuration working, our next goal was to provide a functional setup (along with the visualization) through Cisco Network Controller only. This involves using NSO (Network Services Orchestrator) to deliver these network changes. Let us adapt the NSO files accordingly. We “git-cloned” the repository (tsdn-juniper) that Cisco Automation engineers had posted on github into our NSO VM.
-https://github.com/maddn/tsdn-juniper.git
+2. With the multi-vendor configuration working, our next goal was to provide a functional setup (along with the visualization) through Cisco Network Controller only. This involves using NSO (Network Services Orchestrator) to deliver these network changes. Let us adapt the NSO files accordingly. We “git-cloned” the repository (tsdn-juniper) that Cisco Automation engineers had posted on [github](https://github.com/maddn/tsdn-juniper.git) into our NSO VM.
 
-3)	We extended the l2vpn service package in that repository to make our example  configuration work. We copied the "flat-l2vpn-juniper" folder into the package folder in our NSO environment. We followed the **Installation** section of that repository to install the "flat-l2vpn-juniper" package.
-4)	Using the Juniper config syntax stated in the above example, we used NSO cli to config the commands and use **commit dry-run outformat xml** to get the configuration template and replace the required parameters with input variable (seen in the XML section below, but did not apply the commit).
+3. We extended the l2vpn service package in that repository to make our example  configuration work. We copied the "flat-l2vpn-juniper" folder into the package folder in our NSO environment. We followed the **Installation** section of that repository to install the "flat-l2vpn-juniper" package.
+
+4. Using the Juniper config syntax stated in the above example, we used NSO CLI to configure the commands and use **commit dry-run outformat xml** to get the configuration template and replace the required parameters with input variable (seen in the XML section below, but did not apply the commit).
+
 ```
 cisco@nso-cnc5-brown-nss-j:~$ ncs_cli -u admin -C
 admin connected from 10.16.27.1 using ssh on nso-cnc5-brown-nss-j
@@ -202,8 +203,10 @@ admin@ncs(config)# end
 Uncommitted changes found, commit them? [yes/no/CANCEL] no
 admin@ncs#
 ```
-5)	We saved the config template inside **~/ncs-run/packages/flat-l2vpn-juniper/templates** folder as **cisco-flat-L2vpn-fp-junos-p2p-l2circuit-template.xml**.
+
+5. We saved the config template inside **~/ncs-run/packages/flat-l2vpn-juniper/templates** folder as **cisco-flat-L2vpn-fp-junos-p2p-l2circuit-template.xml**.
 This file has been added with this repository.
+
 ```
 cisco@nso-cnc5-brown-nss-j:~$ cd ncs-run/packages/flat-l2vpn-juniper/
 cisco@nso-cnc5-brown-nss-j:~/ncs-run/packages/flat-l2vpn-juniper$ 
@@ -214,7 +217,9 @@ cisco@nso-cnc5-brown-nss-j:~/ncs-run/packages/flat-l2vpn-juniper/templates$
 cisco@nso-cnc5-brown-nss-j:~/ncs-run/packages/flat-l2vpn-juniper/templates$ ls
 cisco-flat-L2vpn-fp-junos-p2p-l2circuit-template.xml  cisco-flat-L2vpn-fp-junos-template.xml
 ```
-6)	We went to the folder **~/ncs-run/packages/flat-l2vpn-juniper/python/flat_l2vpn_juniper** and edited the **Junos.py** to add the p2p section inside the **def conf_l2vpn(self, site, local):** function.
+
+6. We went to the folder **~/ncs-run/packages/flat-l2vpn-juniper/python/flat_l2vpn_juniper** and edited the **Junos.py** to add the p2p section inside the **def conf_l2vpn(self, site, local):** function.
+
 ```
 class Junos:
     def conf_l2vpn(self, site, local):
@@ -236,10 +241,11 @@ class Junos:
 ```
 This file has been added in our repository.
 
-7)	To make this configuration work, we had to modify the template for NSO Core Function Package for L2vpn (**cisco-flat-L2vpn-fp-internal**).
+7. To make this configuration work, we had to modify the template for NSO Core Function Package for L2vpn (**cisco-flat-L2vpn-fp-internal**).
 
      -  Went to the folder **~/ncs-run/packages/cisco-flat-L2vpn-fp-internal/templates**.
      -  Edited both **cisco-flat-L2vpn-fp-cli-evpn-vpws-template.xml** and **cisco-flat-L2vpn-fp-cli-p2p-template.xml** with the content below:
+     
 ```
 <l2vpn xmlns="http://tail-f.com/ned/cisco-ios-xr">
       <ignore-mtu-mismatch/>
@@ -257,7 +263,9 @@ This file has been added in our repository.
       ......< skipping some sections>.....
     </l2vpn>
 ```
-8)	Reloaded the packages in NSO (**packages reload**).
+
+8. Reloaded the packages in NSO (**packages reload**).
+
 ```
 cisco@nso-cnc5-brown-nss-j:~/ncs-run$ ncs_cli -u admin -C
 admin connected from 10.16.27.1 using ssh on nso-cnc5-brown-nss-j
@@ -289,7 +297,8 @@ reload-result {
 }
 …..............< skipping some output >..................
 ```
-9)	Now we were ready to deploy and visualize this in Cisco Crosswork Network Controller.  (We documented these steps in the Github Repo: https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/blob/main/README.md)
+
+9. Now we were ready to deploy and visualize this in Cisco Crosswork Network Controller.  (We documented these steps in the [Github Repo](https://github.com/tchowdhu/CNC-Conf-Cisco-Junos-L2VPN-P2P/blob/main/README.md)
 
       1. Select L2VPN under Services Section.
          
@@ -312,9 +321,10 @@ reload-result {
          <img width="468" alt="image" src="https://github.com/xrdocs/automation/assets/13122698/63d41e54-2636-4b1e-8b39-a93653e09ac0">
 
 
-Let us now examine the CLI on the routers to verify the output:
+Let us now examine the CLI on the routers to verify the output.
+
+Cisco IOS XRv9000 (show l2vpn xconnect):
 ```
-Cisco xrv9K (show l2vpn xconnect):
 Legend: ST = State, UP = Up, DN = Down, AD = Admin Down, UR = Unresolved,
         SB = Standby, SR = Standby Ready, (PP) = Partially Programmed,
         LU = Local Up, RU = Remote Up, CO = Connected, (SI) = Seamless Inactive
@@ -325,8 +335,9 @@ Group      Name       ST   Description            ST       Description          
 TEST       TEST       UP   Gi0/0/0/1.512          UP       198.19.1.99     101    UP    
 ----------------------------------------------------------------------------------------
 ```
-```
+
 Juniper vMX (show l2circuit connections):
+```
 Layer-2 Circuit Connections:
 
 Legend for connection status (St)   
@@ -355,4 +366,7 @@ Neighbor: 198.19.1.4
       Local interface: ge-0/0/1.512, Status: Up, Encapsulation: VLAN
       Flow Label Transmit: No, Flow Label Receive: No
 ```
+
+# Conclusion
+
 Establishing operational multi-vendor setups might appear daunting, yet there's always a pathway when you're willing to explore how these products operate at their core.
