@@ -247,8 +247,8 @@ This file has been added in our repository.
 
 To make this configuration work, we had to modify the template for NSO Core Function Package for L2vpn (**cisco-flat-L2vpn-fp-internal**).
 
-     -  Went to the folder **~/ncs-run/packages/cisco-flat-L2vpn-fp-internal/templates**.
-     -  Edited both **cisco-flat-L2vpn-fp-cli-evpn-vpws-template.xml** and **cisco-flat-L2vpn-fp-cli-p2p-template.xml** with the content below:
+-  Went to the folder **~/ncs-run/packages/cisco-flat-L2vpn-fp-internal/templates**.
+-  Edited both **cisco-flat-L2vpn-fp-cli-evpn-vpws-template.xml** and **cisco-flat-L2vpn-fp-cli-p2p-template.xml** with the content below:
      
 ```
 <l2vpn xmlns="http://tail-f.com/ned/cisco-ios-xr">
