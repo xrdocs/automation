@@ -1,20 +1,12 @@
 ---
 published: true
-date: '2026-02-04 00:00 +0800'
-title: Application Note: Using Crosswork Planning Startup Script
-tags:
-  - cisco
-  - WAE
-  - Crosswork Planning
-  - Crosswork Planning Collector
-  - Startup Script
-  - Crosswork Network Controller
-  - get-plan
-  - Automation
-  - Design
-  - Capacity Planning
+date: '2026-02-04 16:20 +0800'
+title: Untitled
 author: Fung Lim
-excerpt: Getting started with Crosswork Planning Collector
+excerpt: 'Application Note: Using Crosswork Planning Startup Script'
+tags:
+  - Crosswork Planning
+  - Crosswork Network Controller
 ---
 {% include toc %}
 
