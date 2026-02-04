@@ -283,7 +283,7 @@ This script fulfills that role by providing the network model from CNC, enabling
 2. **Database file requirement**: Downstream collectors fail if the script doesn't produce a valid `.db` file
 3. **Credential management**: Hardcoded credentials should be externalized for security
 4. **SSL verification**: Script disables SSL verification (`verify=False`) for self-signed certificates
-
+5. **AAA Session Limits**: As a safeguard, it is preferred to use separate CNC credentials for get-plan. Under Admin > AAA Settings, No. of parallel sessions should be set orders higher than No. of parallel sessions per user (e.g. 200 vs 50). 
 ## References
 
 - [Cisco Crosswork Planning 7.2 Collection Setup Guide - Startup Scripts](https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/crosswork-planning/7-2/setup-guide/cisco-crosswork-planning-7-2-collection-setup-and-administration/m-collectors-in-cp.html#run-startup-script)
