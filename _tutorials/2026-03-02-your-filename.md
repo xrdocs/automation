@@ -1,7 +1,7 @@
 ---
 published: false
 date: '2026-03-02 20:34 +0800'
-title: ''
+title: Using External Scripts to manipulate network models in Crosswork Planning
 ---
 # Tutorial: Using External Scripts to Manipulate Network Models in Crosswork Planning
 
