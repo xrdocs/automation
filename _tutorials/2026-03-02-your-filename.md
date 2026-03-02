@@ -1,7 +1,8 @@
 ---
-published: false
+published: true
 date: '2026-03-02 20:34 +0800'
 title: Using External Scripts to manipulate network models in Crosswork Planning
+author: Lim Fung
 ---
 # Tutorial: Using External Scripts to Manipulate Network Models in Crosswork Planning
 
