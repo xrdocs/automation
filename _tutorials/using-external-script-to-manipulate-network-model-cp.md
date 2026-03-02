@@ -13,7 +13,7 @@ excerpt: >-
 
 Crosswork Planning's Collector framework supports [running external scripts against a network model](https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/crosswork-planning/7-2/setup-guide/cisco-crosswork-planning-7-2-collection-setup-and-administration/m-collectors-in-cp.html#run-external-scripts). An external script takes a network model produced by an upstream collector, modifies it programmatically and writes the result back out. The Collector framework handles all the file plumbing — it passes the source network model and the output network model as command-line arguments. This gives you a powerful extension point: any transformation you can express in Python can be inserted into an automated collection chain.
 
-This tutorial teaches you how to build, deploy, and verify an external script within the Crosswork Planning Collector. As a concrete example, we use a script — **`update_interface_metric.py`** — that copies IPv6 IGP and TE metrics into their IPv4 counterparts, a potential use case in dual-stack networks where the IPv6 metric is authoritative but downstream analysis tools only read IPv4 columns. The same workflow applies to any custom transformation you need to perform on a network model.
+This tutorial teaches you how to build, deploy, and verify an external script within the Crosswork Planning Collector. As an example, we use a script — **`update_interface_metric.py`** — that copies IPv6 IGP and TE metrics into their IPv4 counterparts, a potential use case in dual-stack networks where the IPv6 metric is authoritative but downstream analysis tools only read IPv4 columns. The same workflow applies to any custom transformation you need to perform on a network model.
 
 ---
 
