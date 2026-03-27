@@ -1,0 +1,33 @@
+---
+published: true
+date: '2023-12-12 14:50 +0100'
+title: 'Deploying multi-vendor L2VPN services using Crosswork Network Controller '
+author: Bradley Riapolov
+position: hidden
+tags:
+  - Crosswork
+  - NSO
+  - Multi Vendor
+  - L2VPN
+excerpt: >-
+  This article demonstrates how Crosswork Network Controller (CNC) can be used
+  to deploy and verify a L2VPN service in a multi vendor environment (Juniper
+  and Cisco)
+---
+# Introduction
+
+Service Provider networks inherently span vast and diverse landscapes. These networks often involve intricate blends of hardware and software solutions, often sourced from various vendors. While these ecosystems offer advantages, the task of aligning one vendor's tools to effectively manage changes on another vendor's hardware continues to present a formidable challenge.  
+
+Cisco's Crosswork Controller serves as one of these network orchestration tools. It's essential to understand the range of supported use cases to fully appreciate its capabilities and limitations. The supported use cases can be checked on cisco.com [Solution Overview](https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/crosswork-network-controller/5-0/Solution-Workflow-Guide/bk-crosswork-network-controller-5-0-solution-workflow-guide/m-solution-overview.html#Cisco_Generic_Topic.dita_e1b66704-bf56-4676-8c0b-f956b30bc05f) page.
+
+# Juniper & Cisco configuration templates
+
+# Deployment & Visualization with Crosswork Network Controller
+
+# Conclusion
+
+Establishing operational multi-vendor setups might appear daunting, yet there's always a pathway when you're willing to explore how these products operate at their core.
+
+# Acknowledgement
+
+I'd like to thanks Tahsin Chowdhury for his contribution.
